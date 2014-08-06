@@ -1,0 +1,54 @@
+/**
+ * Stylesheet to override bootstrap styles
+ *
+ */
+
+/*----- General -----*/
+.col-xs-12 {
+	margin-bottom: 10px;
+}
+ul, ol {
+	margin: 0 0 10px 0;
+	padding: 0;
+	list-style-position: inside;
+}
+ul ul {
+	margin-left: 20px;
+}
+.tooltip {
+	text-shadow: none;
+}
+
+/*----- Large desktop -----*/
+@media (min-width: 1200px) {
+.col-xs-12 {
+	margin-bottom: 0;
+}
+.container {
+	max-width: none !important;
+	width: 970px;
+}
+.filter-content .col-md-3 {
+	width: 24.8%;
+}
+}
+
+/*----- Portrait tablet to landscape and desktop -----*/
+@media (min-width: 768px) and (max-width: 1024px) {
+.col-xs-12 {
+	margin-bottom: 0;
+}
+.filter-content .col-md-3 {
+	width: 24.8%;
+}
+}
+
+/*----- Landscape phone to portrait tablet -----*/
+@media (min-width: 767px) {
+.col-xs-12 {
+	margin-bottom: 0;
+}
+.filter-content .col-md-3 {
+	width: 24.8%;
+}
+}

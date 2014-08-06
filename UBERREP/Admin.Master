@@ -1,0 +1,618 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="UBERREP.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to Uberrep</title>
+    <link rel="Stylesheet" href="css/styles.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/elements.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/settings.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/dynamic-captions.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/static-captions.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,600"
+        type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/elastislide.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/bootstrap-override.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/rev-custom.css" type="text/css" media="all" />
+    <link rel="Stylesheet" href="css/responsive.css" type="text/css" media="all" />
+    <link href="logo/generic.css" rel="Stylesheet" type="text/css" />
+    <link href="logo/slider.css" rel="Stylesheet" type="text/css" />
+    <script src="logo/thumbnail-slider.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #767676;
+            background-color: #f2f2f2;
+        }
+
+        h1
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            font-weight: normal;
+            color: #646464;
+        }
+
+        h2
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #646464;
+        }
+
+        h3
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #646464;
+        }
+
+        h4, .heading-icon
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #646464;
+        }
+
+        h5
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #646464;
+        }
+
+        h6
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: #646464;
+        }
+
+        a, a:link
+        {
+            color: #d95b44;
+        }
+
+            a:hover
+            {
+                color: #767676;
+            }
+
+        .inactive-folio-page, .page-links a
+        {
+            background-color: #d95b44;
+        }
+
+        .logo a
+        {
+            font-family: Arial, Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: normal;
+            color: #d95b44;
+            margin-top: 0px;
+        }
+
+            .logo a:hover
+            {
+                color: #d95b44;
+            }
+
+        .call-number
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #727272;
+        }
+
+        .tagline
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #727272;
+        }
+
+        .ddsmoothmenu ul li a
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: #a7a7a7;
+        }
+
+            .ddsmoothmenu ul li.current-menu-item a, .ddsmoothmenu ul li a:hover
+            {
+                background: #484848;
+                color: #a7a7a7 !important;
+            }
+
+        .ddsmoothmenu ul li ul
+        {
+            background: #484848;
+        }
+
+            .ddsmoothmenu ul li ul li.current-menu-item a, .ddsmoothmenu ul li ul li a:hover
+            {
+                color: #fff !important;
+            }
+
+        .menu-link-color a
+        {
+            color: #d95b44 !important;
+        }
+
+        #top-bar
+        {
+            background-color: #0e0e0e;
+        }
+
+        #page-header
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            color: #727272;
+            border-bottom: 1px solid #fff;
+        }
+
+            #page-header a
+            {
+                color: #727272;
+            }
+
+                #page-header a:hover
+                {
+                    color: #d95b44;
+                }
+
+            #page-header .heading-icon
+            {
+                font-family: Raleway, Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                color: #727272;
+            }
+
+        .breadcrumbs
+        {
+            margin-top: 0px;
+        }
+
+            .breadcrumbs > .crumb-active
+            {
+                color: #999;
+            }
+
+        #footer
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #767676;
+        }
+
+            #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
+            {
+                color: #646464;
+            }
+
+        .twitter-box
+        {
+            background: #282828;
+            border: 1px solid #161616;
+        }
+
+        #copyright
+        {
+            background: #484848;
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: normal;
+            color: #242424;
+            border-top: 1px solid #5b5c5d;
+        }
+
+            #copyright a
+            {
+                color: #242424;
+            }
+
+                #copyright a:hover
+                {
+                    color: #fff;
+                }
+
+        .icon-bg, .feature-big-icon .icon-big-bg
+        {
+            background: #d95b44;
+        }
+
+        .post-title a
+        {
+            color: #646464;
+        }
+
+        blockquote
+        {
+            border-left: 5px solid #d95b44;
+        }
+
+            blockquote p, blockquote
+            {
+                color: #d95b44;
+            }
+
+                blockquote.pull-right
+                {
+                    border-right: 5px solid #d95b44;
+                }
+
+        .mybtn, .mybtn-big, .mybtn-small, .mybtn-exsmall
+        {
+            font-family: Raleway, Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        .custom-tagcloud a, .custom-tagcloud a:link
+        {
+            background: #d95b44;
+        }
+
+        .table-th, .table-slug
+        {
+            color: #d95b44;
+        }
+
+        .color
+        {
+            color: #d95b44;
+        }
+
+        #header
+        {
+            background-color: #000;
+            background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/patterns/pat1.jpg );
+            background-repeat: repeat;
+        }
+
+        #page-header
+        {
+            background-color: #e3e3e3;
+        }
+
+        #slider-bg
+        {
+            background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/slider-bg/slider-background1.jpg );
+        }
+
+        #footer
+        {
+            background-color: #000;
+            background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/patterns/pat1.jpg );
+            background-repeat: repeat;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="js/anti-spam.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="home page page-id-45 page-template page-template-template-home-php wpb-js-composer js-comp-ver-4.1.2 vc_responsive">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager2" runat="server">
+        </asp:ScriptManager>
+        <section id="header-wrapper" class="clearfix">
+
+            <div id="header-v1" class="clearfix">
+                <div id="Div1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-12 logo">
+                                <a href="../Index.aspx" title="Uberrep">
+                                    <img src="" alt="Uberrep" /></a>
+                            </div>
+                            <!-- .logo -->
+
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <div class="header-wiget-area">
+                                    <div id="tcsn-custom-social-network-2" class="widget tcsn_widget_social_network">
+                                        <ul class="social clearfix">
+                                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook-icon" title="facebook">
+                                                <img src="images/social-icon-facebook.png" /></a></li>
+                                            <li><a href="https://linkedin.com" target="_blank" class="linkedin-icon" title="linkedin">
+                                                <img src="images/social-icon-linkedin.png" /></a></li>
+                                            <li><a href="https://twitter.com" target="_blank" class="twitter-icon" title="twitter">
+                                                <img src="images/social-icon-twitter.png" /></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                                <div id="smoothmenu" class="ddsmoothmenu">
+                                    <ul id="nav" class="menu">
+                                        <li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-910"><a href="../Index.aspx">Home</a></li>
+                                        <li id="menu-item-1227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1227"><a href="../AboutUs.aspx">About Us</a></li>
+                                        <li id="menu-item-1141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1141"><a href="../Product.aspx">Product Price</a></li>
+
+                                        <!-- display popup -->
+                                        <li id="Li1" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1141">
+                                            <h6 id="popup" onclick="div_show()">SIGN IN</h6>
+                                        </li>
+
+                                      
+
+                                        <li id="menu-item-913" class="menu-link-color menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="../Contact.aspx">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <!-- #menu -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #header -->
+            </div>
+            <!-- #header variation -->
+            <header id="header">
+                <hgroup>
+                    <%--<h1 style="width:20%;" class="site_title"><a href="#">UBERREP Admin</a></h1>--%>
+                    <h1 style="width: 20%;" class="site_title">
+                        <asp:Image ID="IMGLogo" runat="server" Height="55px" ImageUrl="~/Theme/Logos/UBERREP_logo.png" /></h1>
+                    <h2 class="section_title">
+                        <asp:ContentPlaceHolder ID="PageHeader" runat="server"></asp:ContentPlaceHolder>
+                    </h2>
+                    <%if (this.IsUserLoggedIn)
+                      { %><div class="btn_view_site" style="float: right; margin-top: 15px !important;">
+                        <asp:Button ID="Button1" runat="server" OnClick="BTNExit_Click" Text="Log Out"></asp:Button></div>
+                    <%} %>
+                </hgroup>
+            </header>
+
+        </section>
+        <%if (this.IsUserLoggedIn)
+          { %>
+        <section id="secondary_bar">
+            <div style="width: 20%;" class="user">
+                <%if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null)
+                  { %>
+                <p><a href="<%= Page.ResolveUrl("~/Users/User.aspx?id=" + UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.ID) %>"><%= UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.Name %></a></p>
+                <%} %>
+                <!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
+            </div>
+            <div class="breadcrumbs_container">
+                <%--<article class="breadcrumbs"><a href="index.html">Admin</a> <div class="breadcrumb_divider"></div> <a class="current">Dashboard</a></article>--%>
+            </div>
+        </section>
+        <!-- end of secondary bar -->
+        <%} %>
+        <%if (this.IsUserLoggedIn)
+          {%>
+        <aside id="sidebar" class="column" style="height: 2000px; width: 20%;">
+            <%--<%--<div class="quick_search">
+			<input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+		</div>
+        
+		<hr/>		--%>
+            <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT].HasInsert
+               || UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT].HasView))
+               { %>
+            <h3>User Management</h3>
+            <%} %>
+            <ul class="toggle">
+                <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT].HasInsert)
+                   { %>
+                <li class="icn_add_user"><a id="A1" href="~/Users/User.aspx" runat="server">Add New User</a></li>
+                <%} %>
+                <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_MGNT].HasView)
+                   { %>
+                <li class="icn_categories"><a id="A2" href="~/Users/Default.aspx" runat="server">Manage Users</a></li>
+                <%} %>
+                <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_GRP_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.USR_GRP_MGNT].HasView)
+                   { %>
+                <li class="icn_categories"><a id="A3" href="~/Users/UserGroups.aspx" runat="server">Manage User Groups</a></li>
+                <%} %>
+            </ul>
+            <%--<% if(this.IsSystemUser || (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT].ShowClientAdminData)){ %>--%>
+            <%if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 &&
+              (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT].HasView))
+              { %>
+            <h3>Client Management</h3>
+            <%} %>
+            <ul class="toggle">
+                <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT].HasInsert)
+                   {%>
+                <li class="icn_new_article"><a id="A4" href="~/ClientManagement/Client.aspx" runat="server">New Client</a></li>
+                <%} %>
+                <% if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections != null && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.Count > 0 && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections.ContainsKey(UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT) && UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.UserAllowedSections[UBERREP.BusinessLayer.Users.Section.SectionCodes.OFC_MGNT].HasView)
+                   { %>
+                <li class="icn_categories"><a id="A5" href="~/ClientManagement/Default.aspx" runat="server">Manage Clients</a></li>
+                <%} %>
+            </ul>
+            <div id="Div2">
+ 
+ <!-- heading of the form -->
+	<div class="head">
+		<h3>Login Hare</h3>
+		<p></p>
+    </div>
+	
+	<!-- contact us form -->
+		<form action="#" method = "post">
+		<input type = "text" name="vname" value="Your Name" class="text-name"/>
+		<input type = "text" name="vemail" value="Your Email" class="text-name"/>
+		<button id="Button2">Sign In</button>
+		</form>
+ </div> 
+            <footer id="footer" class="clearfix">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="footer-wiget-area clearfix">
+                                <div id="tcsn-custom-social-network-3" class="widget tcsn_widget_social_network">
+                                    <ul class="social clearfix">
+                                        <li><a href="https://facebook.com" target="_blank" class="facebook-icon" title="facebook">
+                                            <img src="images/social-icon-facebook.png" /></a></li>
+                                        <li><a href="http://linkedin.com" target="_blank" class="linkedin-icon" title="linkedin">
+                                            <img src="images/social-icon-linkedin.png" /></a></li>
+                                        <li><a href="http://twitter.com" target="_blank" class="twitter-icon" title="twitter"></a>
+                                            <img src="images/social-icon-twitter.png" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                            Follow on Twitter
+        <h5><a href='https://twitter.com/' target='_blank'>Uberrep</a></h5>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="twitter-box">
+                                <div id="tcsn-custom-twitter-feed-2" class="widget tcsn_widget_twitter">
+                                    <div id="twitter-tcsn-custom-twitter-feed-2">
+                                        <ul class="list-twitter">
+                                            <li>RT &nbsp;<a href="#" target="_blank">@newrelic</a>&nbsp;: When it comes to security, have <a target="_blank" href="#">#analytics</a> on your side. See how &nbsp;<a href="#" target="_blank">@envato</a>&nbsp; used Insights to tackle <a target="_blank" href="#">#heartbleed</a>: <a href="#" target="_blank">http://t.co/jLa</a>…            <span class="tweet-time"><small>
+
+
+                                                <a href="#">4 hours ago </a></small></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <div id="text-2" class="widget widget_text">
+                                <h2 class="widget-title" style="margin-top: -70px;">About</h2>
+                                <div class="textwidget">
+                                    <ul>
+                                        <li><span style="font-weight: bold;">Built For You-</span> Affordable and easy to use, our software was made to help you transition from handfuls of catalogs and paperwork, to seamless sales and ordering all online.</li>
+                                        </br>
+										<li><span style="font-weight: bold;">What You'll Love- </span>All the free time UberReps gives you. Place an order, check order status and inventory levels and pay invoices all in one step.</li>
+                                        </br>
+										<li><span style="font-weight: bold;">Try Us Free-</span> 14 Day Free trial is yours! See how easy it is to use UberReps on us. Start now or contact us for more information.</li>
+
+                                    </ul>
+                                    <p>
+                                        <img alt="logo" src=""></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <div id="tcsn-custom-recent-posts-2" class="widget tcsn_widget_recent_entries">
+                                <h5 class="widget-title">From the blog</h5>
+                                <ul class="custom-recent-entries">
+                                    <li class="clearfix"><span class="custom-recent-entries-meta clearfix">
+                                        <span class="custom-recent-entries-thumb">
+                                            <img width="940" height="460" src="images/blog6.jpg" class="attachment-post-thumbnail wp-post-image" alt="image" /></span>
+
+                                        <span class="custom-recent-entries-date">December 3, 2013</span>
+                                        <a href="#" title="Gallery Post">Gallery Post        </a></span>
+                                    </li>
+                                    <li class="clearfix"><span class="custom-recent-entries-meta clearfix">
+                                        <span class="custom-recent-entries-thumb">
+                                            <img width="940" height="460" src="images/blog5.jpg" class="attachment-post-thumbnail wp-post-image" alt="image" /></span>
+
+                                        <span class="custom-recent-entries-date">December 1, 2013</span>
+                                        <a href="#" title="Useful Resources for designers">Useful Resources for designers        </a></span>
+                                    </li>
+                                    <li class="clearfix"><span class="custom-recent-entries-meta clearfix">
+                                        <span class="custom-recent-entries-thumb">
+                                            <img width="940" height="460" src="images/blog6.jpg" class="attachment-post-thumbnail wp-post-image" alt="image" /></span>
+
+                                        <span class="custom-recent-entries-date">December 1, 2013</span>
+                                        <a href="#" title="This is an amazing Image Post for everyone">This is an amazing Image Post for everyone        </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='col-md-4 col-sm-4 col-xs-12'>
+                            <div id="tcsn-custom-contact-info-2" class="widget tcsn_widget_conatct_info">
+                                <h5 class="widget-title">Get in touch</h5>
+                                <div class="widget-contact-info">
+                                    <div class="widget-address clearfix">
+                                        <span class="address-icon"></span>
+                                        <p>
+                                            Civic Studios, Inc.<br />
+                                            3245 East Creek Blvd, Suite 590<br />
+                                            Bos Boomer, IN 20076
+                                        </p>
+                                    </div>
+                                    <div class="widget-phone"><span class="phone-icon"></span>+(99) 123 345 5678</div>
+                                    <div class="widget-mail">
+                                        <span class="mail-icon"></span><a href="mailto:abc@w.com">abc@W.com        </a>
+                                    </div>
+                                    <div class="widget-skype">
+                                        <span class="skype-icon"></span><a href="http://skype.com/" target="_blank">http://skype.com/       </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <section id="copyright" class="clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+                            <p>
+                                © Copyright 2014                                 
+                            </p>
+
+                            <div class="copyright-menu">
+                                <ul id="menu-secondary-navigation" class="menu">
+                                    <li id="menu-item-919" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-919"><a href="../Index.aspx">Home</a></li>
+                                    <li id="menu-item-1136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1136"><a href="../AboutUs.aspx">About Us</a></li>
+                                    <li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a href="../Product.aspx">Product Price</a></li>
+                                    <li id="menu-item-917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-917"><a href="../Contact.aspx">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- .copyright menu -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </aside>
+        <!-- end of sidebar -->
+        <%} %>
+        <section id="main" class="column">
+            <h4>
+                <asp:PlaceHolder ID="PageMessage" runat="server"></asp:PlaceHolder>
+            </h4>
+            <article class="module width_3_quarter" style="width: 100%;">
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="DataContentPlaceHolder" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </article>
+        </section>
+    </form>
+    <!-- <%=Environment.MachineName %> -->
+</body>
+</html>

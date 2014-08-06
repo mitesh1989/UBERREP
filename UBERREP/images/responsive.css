@@ -1,0 +1,323 @@
+/**
+ * Stylesheet for media queries
+ *
+ */
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+/*=====*****=====*/
+@media (min-width: 1200px) {
+/*header*/
+.logo {
+	text-align: left;
+	margin-bottom: 0;
+}
+.call-number {
+	padding-left: 10px;
+	text-align: right;
+	float: right;
+}
+.tagline {
+	text-align: left;
+	margin: 0;
+}
+.header-wiget-area {
+	float: right;
+}
+/*Menu select - for responsive*/
+.selectnav, .js .selectnav {
+	display: none;
+}
+.ddsmoothmenu ul {
+	display: inline-block;
+}
+.ddsmoothmenu {
+	float: right;
+}
+/*social*/
+.social {
+	width: auto;
+	text-align: left;
+}
+.social li {
+	float: left;
+}
+/*header variations*/
+#header-v1 .header-wiget-area {
+	padding-left: 10px;
+}
+#header-v2 .call-number, #header-v2 .header-wiget-area {
+	margin-bottom: 5px;
+}
+#header-v3 {
+}
+/*pricing*/
+.pricing.three-col .price-column {
+	width: 33.2%;
+}
+.pricing.four-col .price-column {
+	width: 24.9%;
+}
+.pricing.five-col .price-column {
+	width: 19.9%;
+}
+.pricing.col-3 .price-column {
+	width: 33.2%;
+}
+.pricing.col-4 .price-column {
+	width: 24.9%;
+}
+.pricing.col-5 .price-column {
+	width: 19.9%;
+}
+.pricing > :last-child {
+	border-right: 1px solid #e6e6e6 !important;
+}
+.pricing > :first-child {
+	border-left: 1px solid #e6e6e6 !important;
+}
+.price-column {
+	border: 1px solid #e6e6e6;
+	border-width: 1px 0 1px 0 !important;
+}
+.price-column.focused {
+	margin-top: -20px;
+	padding-bottom: 20px;
+	border: none !important;
+}
+/*about*/
+.about-overlay {
+	max-width: 300px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+}
+/*footer*/
+.footer-wiget-area .social {
+	float: right;
+}
+/*copyright*/
+#copyright p {
+	float: left;
+}
+.copyright-menu ul {
+	float: right;
+}
+.copyright-menu ul li {
+	padding-left: 10px;
+	padding-right: 0;
+}
+}
+
+/*=====*****=====*/
+@media (min-width: 980px) and (max-width: 1199px) {
+/*header*/
+.logo {
+	text-align: left;
+	margin-bottom: 0;
+}
+.call-number {
+	padding-left: 10px;
+	text-align: right;
+	float: right;
+}
+.tagline {
+	text-align: left;
+	margin: 0;
+}
+.header-wiget-area {
+	float: right;
+}
+/*Menu select - for responsive*/
+.selectnav, .js .selectnav {
+	display: none;
+}
+.ddsmoothmenu ul {
+	display: inline-block;
+}
+.ddsmoothmenu {
+	float: right;
+}
+/*social*/
+.social {
+	width: auto;
+	text-align: left;
+}
+.social li {
+	float: left;
+}
+/*header variations*/
+#header-v1 .header-wiget-area {
+	padding-left: 10px;
+}
+#header-v2 .call-number, #header-v2 .header-wiget-area {
+	margin-bottom: 5px;
+}
+#header-v3 {
+}
+/*pricing*/
+.pricing.three-col .price-column {
+	width: 33.2%;
+}
+.pricing.four-col .price-column {
+	width: 24.9%;
+}
+.pricing.five-col .price-column {
+	width: 19.9%;
+}
+.pricing.col-3 .price-column {
+	width: 33.2%;
+}
+.pricing.col-4 .price-column {
+	width: 24.9%;
+}
+.pricing.col-5 .price-column {
+	width: 19.9%;
+}
+.pricing > :last-child {
+	border-right: 1px solid #e6e6e6 !important;
+}
+.pricing > :first-child {
+	border-left: 1px solid #e6e6e6 !important;
+}
+.price-column {
+	border: 1px solid #e6e6e6;
+	border-width: 1px 0 1px 0 !important;
+}
+.price-column.focused {
+	margin-top: -20px;
+	padding-bottom: 20px;
+	border: none !important;
+}
+/*about*/
+.about-overlay {
+	max-width: 300px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+}
+/*footer*/
+.footer-wiget-area .social {
+	float: right;
+}
+/*copyright*/
+#copyright p {
+	float: left;
+}
+.copyright-menu ul {
+	float: right;
+}
+.copyright-menu ul li {
+	padding-left: 10px;
+	padding-right: 0;
+}
+}
+
+/*=====*****=====*/
+@media (min-width: 992px) {
+/*header*/
+.logo {
+	text-align: left;
+	margin-bottom: 0;
+}
+.call-number {
+	padding-left: 10px;
+	text-align: right;
+	float: right;
+}
+.tagline {
+	text-align: left;
+	margin: 0;
+}
+.header-wiget-area {
+	float: right;
+}
+/*Menu select - for responsive*/
+.selectnav, .js .selectnav {
+	display: none;
+}
+.ddsmoothmenu ul {
+	display: inline-block;
+}
+.ddsmoothmenu {
+	float: right;
+}
+/*social*/
+.social {
+	width: auto;
+	text-align: left;
+}
+.social li {
+	float: left;
+}
+/*header variations*/
+#header-v1 .header-wiget-area {
+	padding-left: 10px;
+}
+#header-v2 .call-number, #header-v2 .header-wiget-area {
+	margin-bottom: 5px;
+}
+#header-v3 {
+}
+/*pricing*/
+.pricing.three-col .price-column {
+	width: 33.2%;
+}
+.pricing.four-col .price-column {
+	width: 24.9%;
+}
+.pricing.five-col .price-column {
+	width: 19.9%;
+}
+.pricing.col-3 .price-column {
+	width: 33.2%;
+}
+.pricing.col-4 .price-column {
+	width: 24.9%;
+}
+.pricing.col-5 .price-column {
+	width: 19.9%;
+}
+.pricing > :last-child {
+	border-right: 1px solid #e6e6e6 !important;
+}
+.pricing > :first-child {
+	border-left: 1px solid #e6e6e6 !important;
+}
+.price-column {
+	border: 1px solid #e6e6e6;
+	border-width: 1px 0 1px 0 !important;
+}
+.price-column.focused {
+	margin-top: -20px;
+	padding-bottom: 20px;
+	border: none !important;
+}
+/*footer*/
+.footer-wiget-area .social {
+	float: right;
+}
+/*copyright*/
+#copyright p {
+	float: left;
+}
+.copyright-menu ul {
+	float: right;
+}
+.copyright-menu ul li {
+	padding-left: 10px;
+	padding-right: 0;
+}
+}
+
+/*=====*****=====*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/*=====*****=====*/
+@media (max-width: 767px) {
+}

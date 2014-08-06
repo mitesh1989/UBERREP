@@ -1,0 +1,63 @@
+/*----------------------------------------------
+css settings for HTML div exactCenter 
+------------------------------------------------*/
+.head{text-align:center;}
+#send {
+    background-color: peru;
+    border: medium none;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Raleway',sans-serif;
+    font-size: 18px;
+    height: 45px;
+    width: 96%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#send #popup{
+	height:30px;
+	width:150px;
+	border-radius:3px;
+	background-color: peru;
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	font-size:18px;
+}
+
+
+div#popupContact{
+	position: absolute; 
+	display: none;
+	width:60%; 
+	padding:20px 30px 20px 15px; 
+	background-color:#f3f3f3; 
+	border-radius:3px; 
+	font-family: 'Raleway', sans-serif;
+	z-index:9999;
+	    margin-top: 19%;
+    margin-left: -20%;
+	} 
+   #popup	{color: #a7a7a7 !important; padding:8px; cursor: pointer; font-size: 12px;
+}
+
+.title{
+	width:50%;
+	margin-left:160px;
+	}  
+ #popup:hover{
+    background: none repeat scroll 0 0 #484848;
+    border: medium none;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+	color: #a7a7a7 !important;padding: 8px; cursor: pointer;
+}
+.text-name{margin:0 0 10px 0! important;}
+/*-----------------------------------------------------------------
+css settings for right side advertisement
+------------------------------------------------------------------*/
+
+#formget{
+	float:right;
+	margin-top:20px;
+	margin-right:50px;
+	}	

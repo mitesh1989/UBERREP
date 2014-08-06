@@ -1,0 +1,26 @@
+.tp-caption.custom_heading_bold_orange {
+font-size:38px;
+line-height:42px;
+font-weight:700;
+font-family:"Raleway",Arial,Helvetica,sans-serif;
+color:rgb(217, 91, 68);
+text-decoration:none;
+background-color:transparent;
+border-width:0px;
+border-color:rgb(217, 91, 68);
+border-style:none;
+}
+
+.tp-caption.custom_small_text {
+font-size:14px;
+line-height:22px;
+font-weight:400;
+font-family:"Raleway",Arial,Helvetica,sans-serif;
+color:#a7a7a7;
+text-decoration:none;
+background-color:transparent;
+border-width:0px;
+border-color:rgb(167, 167, 167);
+border-style:none;
+}
+

@@ -1,0 +1,68 @@
+/* Stylesheet for revolution custom styles */
+
+.rev_slider_wrapper {
+	text-shadow: 0 1px 0 #000;
+}
+/****************************************************************************************************
+	-	TP THUMBS 	-
+*****************************************************************************************************/
+
+.tp-bullets.tp-thumbs {
+	z-index:1000;
+	position:absolute;
+	padding:0 !important;
+	background-color: transparent;
+	width: 100% !important;
+	height: 74px; 			/* THE DIMENSIONS OF THE THUMB CONTAINER */
+	margin-top: -50px;
+	vertical-align: top;
+}
+.tp-bullets.tp-thumbs img {
+	width: auto;
+	height: auto;
+	background: none;
+	vertical-align: top;
+}
+.fullwidthbanner-container .tp-thumbs {
+	padding: 0 !important;
+}
+.tp-bullets.tp-thumbs .tp-mask {
+	width: 100% !important;
+	height: 74px;  			/* THE DIMENSIONS OF THE THUMB CONTAINER */
+	overflow:hidden;
+	position:relative;
+}
+.tp-bullets.tp-thumbs .tp-mask .tp-thumbcontainer {
+	width:5000px;
+	position:absolute;
+}
+.tp-bullets.tp-thumbs .bullet {
+	width:180px;
+	height:74px;
+	margin: 0 2px 0 2px;			/* THE DIMENSION OF A SINGLE THUMB */
+	cursor:pointer;
+	overflow:hidden;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.2);
+	float:left;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+	/*filter: alpha(opacity=100);	*/
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	padding: 0 !important;
+}
+.tp-bullets.tp-thumbs .bullet.selected {
+	background-color: rgba(0, 0, 0, 0.6);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+.tp-thumbcontainer {
+	left: 0 !important;
+}
