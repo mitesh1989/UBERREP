@@ -65,100 +65,96 @@
 </head>
 <body class="fixed-top">
     <form id="form1" runat="server">
-    <!-- BEGIN HEADER -->
-    <div class="header navbar navbar-inverse navbar-fixed-top">
-        <!-- BEGIN TOP NAVIGATION BAR -->
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <!-- BEGIN LOGO -->
-                <a class="brand" href="Dashboard.html">
-                    <img src="" alt="Uberrep" />
-                </a>
-                <!-- END LOGO -->
-                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-                <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-                    <img src="../assets/img/menu-toggler.png" alt="" />
-                </a>
-                <!-- END RESPONSIVE MENU TOGGLER -->
-                <!-- BEGIN TOP NAVIGATION MENU -->
-                <ul class="nav pull-right">
-                    <li class="dropdown user"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img alt="" src="../assets/img/avatar1_small.jpg" alt="Profile" />
-                        <span class="username">User</span> <i class="icon-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="User Profile.html"><i class="icon-user"></i>My Profile</a></li>
-                            <li><a href="#"><i class="icon-tasks"></i>My Tasks</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+        <!-- BEGIN HEADER -->
+        <div class="header navbar navbar-inverse navbar-fixed-top">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <!-- BEGIN LOGO -->
+                    <a class="brand" href="Dashboard.html">
+                        <img src="" alt="Uberrep" />
+                    </a>
+                    <!-- END LOGO -->
+                    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                    <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                        <img src="../assets/img/menu-toggler.png" alt="" />
+                    </a>
+                    <!-- END RESPONSIVE MENU TOGGLER -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <ul class="nav pull-right">
+                        <li class="dropdown user"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img alt="" src="../assets/img/avatar1_small.jpg" alt="Profile" />
+                            <span class="username">User</span> <i class="icon-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="User Profile.html"><i class="icon-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="icon-tasks"></i>My Tasks</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container row-fluid">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar nav-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <ul>
+                    <li style="visibility: hidden;">
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                        <div class="sidebar-toggler hidden-phone">
+                        </div>
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                    </li>
+                    <li>
+                        <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                        <form class="sidebar-search">
+                            <div class="input-box">
+                                <a href="javascript:;" class="remove"></a>
+                                <input type="text" placeholder="Search..." />
+                                <input type="button" class="submit" value=" " />
+                            </div>
+                        </form>
+                        <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                    </li>
+                    <li class="start active "><a href="wholesale.html"><i class="icon-home"></i><span
+                        class="title">Dashboard</span> <span class="selected"></span></a></li>
+                    <li class="has-sub "><a href="Upload Inventory.html"><i class="icon-bookmark-empty"></i><span class="title">Upload Inventory</span> <span class=""></span></a></li>
+                    <li class="has-sub "><a href="Add Sales.html"><i class="icon-table"></i><span class="title">Add Sales</span> <span class=""></span></a></li>
+                    <li class="has-sub "><a href="Add Retailers.html"><i class="icon-th-list"></i><span
+                        class="title">Add Retailers</span> <span class=""></span></a></li>
+                    <li class="has-sub "><a href="javascript:;"><i class="icon-briefcase"></i><span class="title">Extra</span> <span class="arrow "></span></a>
+                        <ul class="sub">
+                            <li><a href="User Profile.html">User Profile</a></li>
                         </ul>
                     </li>
-                    <!-- END USER LOGIN DROPDOWN -->
+                    <li class="has-sub "><a href="Login.html"><i class="icon-user"></i><span class="title">Login</span> <span class=""></span></a></li>
                 </ul>
-                <!-- END TOP NAVIGATION MENU -->
+                <!-- END SIDEBAR MENU -->
             </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN PAGE -->
+            <div class="page-content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- END PAGE -->
         </div>
-        <!-- END TOP NAVIGATION BAR -->
-    </div>
-    <!-- END HEADER -->
-    <!-- BEGIN CONTAINER -->
-    <div class="page-container row-fluid">
-        <!-- BEGIN SIDEBAR -->
-        <div class="page-sidebar nav-collapse collapse">
-            <!-- BEGIN SIDEBAR MENU -->
-            <ul>
-                <li>
-                    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-                    <div class="sidebar-toggler hidden-phone">
-                    </div>
-                    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-                </li>
-                <li>
-                    <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-                    <form class="sidebar-search">
-                    <div class="input-box">
-                        <a href="javascript:;" class="remove"></a>
-                        <input type="text" placeholder="Search..." />
-                        <input type="button" class="submit" value=" " />
-                    </div>
-                    </form>
-                    <!-- END RESPONSIVE QUICK SEARCH FORM -->
-                </li>
-                <li class="start active "><a href="wholesale.html"><i class="icon-home"></i><span
-                    class="title">Dashboard</span> <span class="selected"></span></a></li>
-                <li class="has-sub "><a href="Upload Inventory.html"><i class="icon-bookmark-empty">
-                </i><span class="title">Upload Inventory</span> <span class=""></span></a></li>
-                <li class="has-sub "><a href="Add Sales.html"><i class="icon-table"></i><span class="title">
-                    Add Sales</span> <span class=""></span></a></li>
-                <li class="has-sub "><a href="Add Retailers.html"><i class="icon-th-list"></i><span
-                    class="title">Add Retailers</span> <span class=""></span></a></li>
-                <li class="has-sub "><a href="javascript:;"><i class="icon-briefcase"></i><span class="title">
-                    Extra</span> <span class="arrow "></span></a>
-                    <ul class="sub">
-                        <li><a href="User Profile.html">User Profile</a></li>
-                    </ul>
-                </li>
-                <li class="has-sub "><a href="Login.html"><i class="icon-user"></i><span class="title">
-                    Login</span> <span class=""></span></a></li>
-            </ul>
-            <!-- END SIDEBAR MENU -->
-        </div>
-        <!-- END SIDEBAR -->
-        <!-- BEGIN PAGE -->
-        <div class="page-content">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <!-- END PAGE -->
-    </div>
-    <!-- END CONTAINER -->
-    <!-- BEGIN FOOTER -->
-    <div class="footer">
-        &copy; Copyright 2014
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            &copy; Copyright 2014
         <div class="span pull-right">
             <span class="go-top"><i class="icon-angle-up"></i></span>
         </div>
-    </div>
-    <!-- END FOOTER -->
+        </div>
+        <!-- END FOOTER -->
     </form>
 </body>
 </html>
