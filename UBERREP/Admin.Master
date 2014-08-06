@@ -369,7 +369,7 @@
                 <!-- #header -->
             </div>
             <!-- #header variation -->
-            <header id="header">
+            <header id="header1">
                 <hgroup>
                     <%--<h1 style="width:20%;" class="site_title"><a href="#">UBERREP Admin</a></h1>--%>
                     <h1 style="width: 20%;" class="site_title">
@@ -444,21 +444,7 @@
                 <li class="icn_categories"><a id="A5" href="~/ClientManagement/Default.aspx" runat="server">Manage Clients</a></li>
                 <%} %>
             </ul>
-            <div id="Div2">
- 
- <!-- heading of the form -->
-	<div class="head">
-		<h3>Login Hare</h3>
-		<p></p>
-    </div>
-	
-	<!-- contact us form -->
-		<form action="#" method = "post">
-		<input type = "text" name="vname" value="Your Name" class="text-name"/>
-		<input type = "text" name="vemail" value="Your Email" class="text-name"/>
-		<button id="Button2">Sign In</button>
-		</form>
- </div> 
+             
             <footer id="footer" class="clearfix">
                 <div class="container">
                     <div class="row">
