@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Home.Master" AutoEventWireup="true"
     CodeBehind="Signup.aspx.cs" %>
 
-<%@ Register Src="~/Controls/SignUp.ascx" TagPrefix="uc1" TagName="SignUp" %>
+<%@ Register Src="~/Controls/SignUp.ascx" TagPrefix="uc1" TagName="SignUpUC" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -334,7 +334,7 @@
                                     <input type="text" name="vemail" value="Conform Password" class="text-name" class="conform_password" />
                                     <button id="reg">Register Now!</button>
                                 </form>--%>
-                                <uc1:SignUp runat="server" id="SignUp" />
+                                <uc1:SignUpUC runat="server" id="SignUp" />
 
                             </div>
                         </div>

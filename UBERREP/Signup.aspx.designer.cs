@@ -18,5 +18,5 @@ public partial class SignUp {
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::UBERREP.Controls.SignUp SignUp;
+    protected global::UBERREP.Controls.SignUp SignUpUC;
 }
