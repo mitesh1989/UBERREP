@@ -239,7 +239,7 @@ namespace UBERREP.BusinessLayer.Users
         internal override void Fill(SqlDataReader dataReader)//possible allowed roles on each section
         {
             this.ID =  dataReader["id"]!=DBNull.Value ? int.Parse(dataReader["id"].ToString()) : 0;
-            this.Type = dataReader["SectionType"] != null ? (UserTypes)int.Parse(dataReader["SectionType"].ToString()) : UserTypes.Client;
+            this.Type = dataReader["SectionType"] != null ? (UserTypes)int.Parse(dataReader["SectionType"].ToString()) : UserTypes.Retailer;
             this.Name = dataReader["name"]!=DBNull.Value ? dataReader["name"].ToString() : string.Empty;
             this.Code = (SectionCodes)Enum.Parse(typeof(SectionCodes),dataReader["Code"].ToString());
             this.AllowedSectionRoles = dataReader["Roles"] != DBNull.Value ? (Role)UBERREP.CommonLayer.Functions.DeSerialize(new StringReader(dataReader["Roles"].ToString()), typeof(Role)) : new Role();

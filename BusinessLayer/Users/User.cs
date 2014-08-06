@@ -217,8 +217,12 @@ namespace UBERREP.BusinessLayer.Users
 
     public enum UserTypes
     {
-        System = 1,
-        Client = 2
+        //System = 1,
+        //Client = 2
+        WholeSale_Admin = 1,
+        Sales_Rep_Admin = 2,
+        Sales_Rep_Individual = 3,
+        Retailer = 4
     }
     public class UserManager : Base.BaseManager
     {
@@ -260,7 +264,7 @@ namespace UBERREP.BusinessLayer.Users
                             loggedInUser.UserAllowedSections.Add(item.Section.Code, item.Role);
                     }
                 }
-                else if (loggedInUser.Type == UserTypes.System)//assigned any groups
+                else if (loggedInUser.Type == UserTypes.WholeSale_Admin)//assigned any groups
                 {
                     //fetch it's allowed section-roles
                     System.Collections.Specialized.NameValueCollection data = new System.Collections.Specialized.NameValueCollection();
@@ -327,7 +331,7 @@ namespace UBERREP.BusinessLayer.Users
                 if (spData["name"] != null) spParams.Add(new SqlParameter("@name", spData["name"]));
                 if (spData["status"] != null) spParams.Add(new SqlParameter("@status", spData["status"]));
                 if (spData["email"] != null) spParams.Add(new SqlParameter("@email", spData["email"]));
-                if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Type == UserTypes.Client && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0)
+                if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Type == UserTypes.Retailer && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0)
                 {
                     spParams.Add(new SqlParameter("@ClientID", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID.ToString()));
                 }

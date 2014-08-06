@@ -65,6 +65,7 @@
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\Context.cs" />
+    <Compile Include="Common\EmailManager.cs" />
     <Compile Include="Common\Functions.cs" />
     <Compile Include="Common\GenericProperties.cs" />
     <Compile Include="Common\Validatation.cs" />
@@ -86,9 +87,6 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UBERREP|AnyCPU'">
-    <OutputPath>C:\UB\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
