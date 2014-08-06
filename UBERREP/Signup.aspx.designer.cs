@@ -9,7 +9,7 @@
 
 
 
-public partial class  {
+public partial class SignUp {
     
     /// <summary>
     /// SignUp control.

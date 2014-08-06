@@ -168,6 +168,7 @@
     <Content Include="SampleFiles\contact.html" />
     <Content Include="SampleFiles\index.html" />
     <Content Include="SampleFiles\Product.html" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
