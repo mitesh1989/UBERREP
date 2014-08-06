@@ -30,68 +30,79 @@
         <link rel="stylesheet" id="responsive-css" href="css/responsive.css" type="text/css" media="all">
 
         <style type="text/css">
-            body {
+            body
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 font-weight: normal;
                 color: #767676;
             }
 
-            h1 {
+            h1
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 36px;
                 font-weight: normal;
                 color: #646464;
             }
 
-            h2 {
+            h2
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 24px;
                 font-weight: bold;
                 color: #646464;
             }
 
-            h3 {
+            h3
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 20px;
                 font-weight: bold;
                 color: #646464;
             }
 
-            h4, .heading-icon {
+            h4, .heading-icon
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 18px;
                 font-weight: bold;
                 color: #646464;
             }
 
-            h5 {
+            h5
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 font-weight: bold;
                 color: #646464;
             }
 
-            h6 {
+            h6
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 12px;
                 font-weight: bold;
                 color: #646464;
             }
 
-            a, a:link {
+            a, a:link
+            {
                 color: #d95b44;
             }
 
-                a:hover {
+                a:hover
+                {
                     color: #767676;
                 }
 
-            .inactive-folio-page, .page-links a {
+            .inactive-folio-page, .page-links a
+            {
                 background-color: #d95b44;
             }
 
-            .logo a {
+            .logo a
+            {
                 font-family: Arial, Arial, Helvetica, sans-serif;
                 font-size: 32px;
                 font-weight: normal;
@@ -99,53 +110,63 @@
                 margin-top: 0px;
             }
 
-                .logo a:hover {
+                .logo a:hover
+                {
                     color: #d95b44;
                 }
 
-            .call-number {
+            .call-number
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 font-weight: bold;
                 color: #727272;
             }
 
-            .tagline {
+            .tagline
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 font-weight: bold;
                 color: #727272;
             }
 
-            .ddsmoothmenu ul li a {
+            .ddsmoothmenu ul li a
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 12px;
                 font-weight: bold;
                 color: #a7a7a7;
             }
 
-                .ddsmoothmenu ul li.current-menu-item a, .ddsmoothmenu ul li a:hover {
+                .ddsmoothmenu ul li.current-menu-item a, .ddsmoothmenu ul li a:hover
+                {
                     background: #484848;
                     color: #a7a7a7 !important;
                 }
 
-            .ddsmoothmenu ul li ul {
+            .ddsmoothmenu ul li ul
+            {
                 background: #484848;
             }
 
-                .ddsmoothmenu ul li ul li.current-menu-item a, .ddsmoothmenu ul li ul li a:hover {
+                .ddsmoothmenu ul li ul li.current-menu-item a, .ddsmoothmenu ul li ul li a:hover
+                {
                     color: #fff !important;
                 }
 
-            .menu-link-color a {
+            .menu-link-color a
+            {
                 color: #d95b44 !important;
             }
 
-            #top-bar {
+            #top-bar
+            {
                 background-color: #0e0e0e;
             }
 
-            #page-header {
+            #page-header
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 12px;
                 font-weight: normal;
@@ -153,46 +174,55 @@
                 border-bottom: 1px solid #fff;
             }
 
-                #page-header a {
+                #page-header a
+                {
                     color: #727272;
                 }
 
-                    #page-header a:hover {
+                    #page-header a:hover
+                    {
                         color: #d95b44;
                     }
 
-                #page-header .heading-icon {
+                #page-header .heading-icon
+                {
                     font-family: Raleway, Arial, Helvetica, sans-serif;
                     font-size: 18px;
                     font-weight: bold;
                     color: #727272;
                 }
 
-            .breadcrumbs {
+            .breadcrumbs
+            {
                 margin-top: 0px;
             }
 
-                .breadcrumbs > .crumb-active {
+                .breadcrumbs > .crumb-active
+                {
                     color: #999;
                 }
 
-            #footer {
+            #footer
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 14px;
                 font-weight: normal;
                 color: #767676;
             }
 
-                #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+                #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
+                {
                     color: #646464;
                 }
 
-            .twitter-box {
+            .twitter-box
+            {
                 background: #282828;
                 border: 1px solid #161616;
             }
 
-            #copyright {
+            #copyright
+            {
                 background: #484848;
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-size: 11px;
@@ -201,48 +231,59 @@
                 border-top: 1px solid #5b5c5d;
             }
 
-                #copyright a {
+                #copyright a
+                {
                     color: #242424;
                 }
 
-                    #copyright a:hover {
+                    #copyright a:hover
+                    {
                         color: #fff;
                     }
 
-            .icon-bg, .feature-big-icon .icon-big-bg {
+            .icon-bg, .feature-big-icon .icon-big-bg
+            {
                 background: #d95b44;
             }
 
-            .post-title a {
+            .post-title a
+            {
                 color: #646464;
             }
 
-            blockquote {
+            blockquote
+            {
                 border-left: 5px solid #d95b44;
             }
 
-                blockquote p, blockquote {
+                blockquote p, blockquote
+                {
                     color: #d95b44;
                 }
 
-                    blockquote.pull-right {
+                    blockquote.pull-right
+                    {
                         border-right: 5px solid #d95b44;
                     }
 
-            .mybtn, .mybtn-big, .mybtn-small, .mybtn-exsmall {
+            .mybtn, .mybtn-big, .mybtn-small, .mybtn-exsmall
+            {
                 font-family: Raleway, Arial, Helvetica, sans-serif;
                 font-weight: normal;
             }
 
-            .custom-tagcloud a, .custom-tagcloud a:link {
+            .custom-tagcloud a, .custom-tagcloud a:link
+            {
                 background: #d95b44;
             }
 
-            .table-th, .table-slug {
+            .table-th, .table-slug
+            {
                 color: #d95b44;
             }
 
-            .color {
+            .color
+            {
                 color: #d95b44;
             }
         </style>
@@ -255,26 +296,31 @@
         <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
 
         <style>
-            body {
+            body
+            {
                 background-color: #f2f2f2;
             }
 
-            #header {
+            #header
+            {
                 background-color: #000;
                 background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/patterns/pat1.jpg );
                 background-repeat: repeat;
             }
 
-            #page-header {
+            #page-header
+            {
                 background-color: #e3e3e3;
             }
 
-            #slider-bg {
+            #slider-bg
+            {
                 background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/slider-bg/slider-background1.jpg );
                 background-color:;
             }
 
-            #footer {
+            #footer
+            {
                 background-color: #000;
                 background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/patterns/pat1.jpg );
                 background-repeat: repeat;
@@ -320,7 +366,7 @@
                             </div>
                         </div>
                         <div class="wpb_row vc_row-fluid">
-                            <div class="sign_up"  >
+                            <div class="sign_up" style="background: none repeat scroll 0 0 #fff;border-radius: 17px;box-shadow: 0 0 1px 1px;margin: 0 auto;padding: 30px 0 25px;width: 33%;"  >
                                 <div class="head">
                                     <h3>Create An Account</h3>
                                     <p></p>
@@ -334,7 +380,9 @@
                                     <input type="text" name="vemail" value="Conform Password" class="text-name" class="conform_password" />
                                     <button id="reg">Register Now!</button>
                                 </form>--%>
+                                <div style="width:70%; margin:0 auto;">
                                 <uc1:SignUpUC runat="server" id="SignUp" />
+                                    </div>
 
                             </div>
                         </div>

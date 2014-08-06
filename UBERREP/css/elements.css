@@ -2,7 +2,7 @@
 css settings for HTML div exactCenter 
 ------------------------------------------------*/
 .head{text-align:center;}
-#Login_send {
+#Login_BTNLogin {
     background-color: peru;
     border: medium none;
     border-radius: 3px;
@@ -10,8 +10,8 @@ css settings for HTML div exactCenter
     font-family: 'Raleway',sans-serif;
     font-size: 18px;
     height: 45px;
-    width: 96%;
-    margin-left: 10px;
+    width: 96% !important;
+    margin-left: 5px;
     margin-top: 10px;
 }
 #send #popup{

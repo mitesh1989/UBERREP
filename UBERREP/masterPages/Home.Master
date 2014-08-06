@@ -32,6 +32,7 @@
             color: #767676;
             background-color: #f2f2f2;
         }
+
         h1
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -39,6 +40,7 @@
             font-weight: normal;
             color: #646464;
         }
+
         h2
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -46,6 +48,7 @@
             font-weight: bold;
             color: #646464;
         }
+
         h3
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -53,6 +56,7 @@
             font-weight: bold;
             color: #646464;
         }
+
         h4, .heading-icon
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -60,6 +64,7 @@
             font-weight: bold;
             color: #646464;
         }
+
         h5
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -67,6 +72,7 @@
             font-weight: bold;
             color: #646464;
         }
+
         h6
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -74,18 +80,22 @@
             font-weight: bold;
             color: #646464;
         }
+
         a, a:link
         {
             color: #d95b44;
         }
-        a:hover
-        {
-            color: #767676;
-        }
+
+            a:hover
+            {
+                color: #767676;
+            }
+
         .inactive-folio-page, .page-links a
         {
             background-color: #d95b44;
         }
+
         .logo a
         {
             font-family: Arial, Arial, Helvetica, sans-serif;
@@ -94,10 +104,12 @@
             color: #d95b44;
             margin-top: 0px;
         }
-        .logo a:hover
-        {
-            color: #d95b44;
-        }
+
+            .logo a:hover
+            {
+                color: #d95b44;
+            }
+
         .call-number
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -105,6 +117,7 @@
             font-weight: bold;
             color: #727272;
         }
+
         .tagline
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -112,6 +125,7 @@
             font-weight: bold;
             color: #727272;
         }
+
         .ddsmoothmenu ul li a
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -119,27 +133,33 @@
             font-weight: bold;
             color: #a7a7a7;
         }
-        .ddsmoothmenu ul li.current-menu-item a, .ddsmoothmenu ul li a:hover
-        {
-            background: #484848;
-            color: #a7a7a7 !important;
-        }
+
+            .ddsmoothmenu ul li.current-menu-item a, .ddsmoothmenu ul li a:hover
+            {
+                background: #484848;
+                color: #a7a7a7 !important;
+            }
+
         .ddsmoothmenu ul li ul
         {
             background: #484848;
         }
-        .ddsmoothmenu ul li ul li.current-menu-item a, .ddsmoothmenu ul li ul li a:hover
-        {
-            color: #fff !important;
-        }
+
+            .ddsmoothmenu ul li ul li.current-menu-item a, .ddsmoothmenu ul li ul li a:hover
+            {
+                color: #fff !important;
+            }
+
         .menu-link-color a
         {
             color: #d95b44 !important;
         }
+
         #top-bar
         {
             background-color: #0e0e0e;
         }
+
         #page-header
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -148,29 +168,35 @@
             color: #727272;
             border-bottom: 1px solid #fff;
         }
-        #page-header a
-        {
-            color: #727272;
-        }
-        #page-header a:hover
-        {
-            color: #d95b44;
-        }
-        #page-header .heading-icon
-        {
-            font-family: Raleway, Arial, Helvetica, sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            color: #727272;
-        }
+
+            #page-header a
+            {
+                color: #727272;
+            }
+
+                #page-header a:hover
+                {
+                    color: #d95b44;
+                }
+
+            #page-header .heading-icon
+            {
+                font-family: Raleway, Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                color: #727272;
+            }
+
         .breadcrumbs
         {
             margin-top: 0px;
         }
-        .breadcrumbs > .crumb-active
-        {
-            color: #999;
-        }
+
+            .breadcrumbs > .crumb-active
+            {
+                color: #999;
+            }
+
         #footer
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -178,15 +204,18 @@
             font-weight: normal;
             color: #767676;
         }
-        #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
-        {
-            color: #646464;
-        }
+
+            #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
+            {
+                color: #646464;
+            }
+
         .twitter-box
         {
             background: #282828;
             border: 1px solid #161616;
         }
+
         #copyright
         {
             background: #484848;
@@ -196,66 +225,80 @@
             color: #242424;
             border-top: 1px solid #5b5c5d;
         }
-        #copyright a
-        {
-            color: #242424;
-        }
-        #copyright a:hover
-        {
-            color: #fff;
-        }
+
+            #copyright a
+            {
+                color: #242424;
+            }
+
+                #copyright a:hover
+                {
+                    color: #fff;
+                }
+
         .icon-bg, .feature-big-icon .icon-big-bg
         {
             background: #d95b44;
         }
+
         .post-title a
         {
             color: #646464;
         }
+
         blockquote
         {
             border-left: 5px solid #d95b44;
         }
-        blockquote p, blockquote
-        {
-            color: #d95b44;
-        }
-        blockquote.pull-right
-        {
-            border-right: 5px solid #d95b44;
-        }
+
+            blockquote p, blockquote
+            {
+                color: #d95b44;
+            }
+
+                blockquote.pull-right
+                {
+                    border-right: 5px solid #d95b44;
+                }
+
         .mybtn, .mybtn-big, .mybtn-small, .mybtn-exsmall
         {
             font-family: Raleway, Arial, Helvetica, sans-serif;
             font-weight: normal;
         }
+
         .custom-tagcloud a, .custom-tagcloud a:link
         {
             background: #d95b44;
         }
+
         .table-th, .table-slug
         {
             color: #d95b44;
         }
+
         .color
         {
             color: #d95b44;
         }
-        
+
         #header
         {
             background-color: #000;
             background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/patterns/pat1.jpg );
             background-repeat: repeat;
         }
+
         #page-header
         {
             background-color: #e3e3e3;
         }
+
         #slider-bg
         {
             background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/slider-bg/slider-background1.jpg );
         }
+
         #footer
         {
             background-color: #000;
@@ -273,7 +316,7 @@
 </head>
 <body class="home page page-id-45 page-template page-template-template-home-php wpb-js-composer js-comp-ver-4.1.2 vc_responsive">
     <form id="form1" runat="server">
-    <section id="header-wrapper" class="clearfix">
+        <section id="header-wrapper" class="clearfix">
     
 <div id="header-v1" class="clearfix">
     <div id="header">
@@ -306,13 +349,15 @@
 
  <!-- Popup div starts here -->
  <div id="popupContact">
- 
- <!-- heading of the form -->
-	<div class="head">
-		<h3>Login Here</h3>
-		<p></p>
-    </div>
-	
+    <!-- heading of the form -->
+                                        <div class="head">
+                                            <h3>Login Here</h3>
+                                            <p></p>
+                                        </div>
+
+                                        <!-- contact us form -->
+                                       
+  
 	<!-- contact us form -->
 		<uc1:Login runat="server" id="Login" />
  </div> 
@@ -329,29 +374,14 @@
     <!-- #header --> 
 </div>
 <!-- #header variation -->
-            <header id="header1">
-                <hgroup>
-                    <%--<h1 style="width:20%;" class="site_title"><a href="#">UBERREP Admin</a></h1>--%>
-                    <h1 style="width: 20%;" class="site_title">
-                        <asp:Image ID="IMGLogo" runat="server" Height="55px" ImageUrl="~/Theme/Logos/UBERREP_logo.png" /></h1>
-                    <h2 class="section_title">
-                        <asp:ContentPlaceHolder ID="PageHeader" runat="server"></asp:ContentPlaceHolder>
-                    </h2>
-                    
-                      <div class="btn_view_site" style="float: right; margin-top: 15px !important;">
-                        <asp:Button ID="Button1" runat="server" Text="Log Out"></asp:Button></div>
-                    
-                </hgroup>
-            </header>
-
         </section>
-        
-          
-     <div>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-    <footer id="footer" class="clearfix">
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer id="footer" class="clearfix">
     <div class="container">
                 <div class="row">
             
@@ -428,7 +458,7 @@ Bos Boomer, IN 20076 </p>
 </div></div>        </div>
     </div>
 </footer>
-    <section id="copyright" class="clearfix">
+        <section id="copyright" class="clearfix">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 clearfix">

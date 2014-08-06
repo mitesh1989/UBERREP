@@ -24,7 +24,7 @@ namespace UBERREP.Controls
             errorMessage = string.Empty;
 
             if (!this.TXTUserName.IsValidInput(InputType.Username)) errorMessage += "Invalid Input - UserName";
-            if (!this.TXTPassword.IsValidInput(InputType.Password)) errorMessage += "Invalid Input - Password";
+            if (!this.txtPassword.IsValidInput(InputType.Password)) errorMessage += "Invalid Input - Password";
 
             return !string.IsNullOrEmpty(errorMessage);
         }
@@ -34,11 +34,11 @@ namespace UBERREP.Controls
             string errMessage = string.Empty;
             if (this.ValidateInput(out errMessage))
             {
-                this.LBLErrorMessage.Text = errMessage;
+                //this.LBLErrorMessage.Text = errMessage;
             }
             else
             {
-                UBERREP.BusinessLayer.Users.User loggedInUser = UBERREP.BusinessLayer.Users.UserManager.ValidateUser(this.TXTUserName.Text.Trim(), this.TXTPassword.Text.Trim());
+                UBERREP.BusinessLayer.Users.User loggedInUser = UBERREP.BusinessLayer.Users.UserManager.ValidateUser(this.TXTUserName.Text.Trim(), this.txtPassword.Text.Trim());
 
 
                 if (loggedInUser != null)
@@ -54,20 +54,20 @@ namespace UBERREP.Controls
                             }
                         case Status.Suspended:
                             {
-                                this.LBLErrorMessage.Text = "User account suspended";
+                                //this.LBLErrorMessage.Text = "User account suspended";
                                 break;
                             }
                         case Status.Deleted:
                             {
-                                this.LBLErrorMessage.Text = "User account deleted";
+                                //this.LBLErrorMessage.Text = "User account deleted";
                                 break;
                             }
                     }
                 }
                 else
                 {
-                    TXTPassword.Focus();
-                    this.LBLErrorMessage.Text = "Invalid Credentials, Please enter correct username or password";
+                    txtPassword.Focus();
+                    //this.LBLErrorMessage.Text = "Invalid Credentials, Please enter correct username or password";
                 }
             }
         }
