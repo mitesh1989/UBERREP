@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Uberrep
+namespace Uberrep.UI.UB.Admin
 {
-    public partial class Product : System.Web.UI.Page
+    public partial class AdminDashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

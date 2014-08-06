@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true"
-    CodeBehind="Index.aspx.cs" Inherits="UBERREP.Admin.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Home.Master" AutoEventWireup="true"
+    CodeBehind="Index.aspx.cs" Inherits="Uberrep.Index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="DataContentPlaceHolder" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- #header-wrapper -->
     <div id="slider-bg">
         <div class="container">
@@ -11,7 +11,7 @@
             <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet'
                 type='text/css'>
             <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-            <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+            <script type="text/javascript" src='js/jquery.themepunch.revolution.min.js"'></script>
             <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
                 style="margin: 0px auto; padding: 0px; margin-top: 30px; margin-bottom: 20px;
                 max-height: 500px;">

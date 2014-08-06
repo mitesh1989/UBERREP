@@ -58,8 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
-    <Content Include="Clients\Client.aspx" />
-    <Content Include="Clients\Default.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\SignUp.ascx" />
@@ -161,11 +159,21 @@
     <Content Include="logo\navbuttons.png" />
     <Content Include="logo\slider.css" />
     <Content Include="logo\thumbnail-slider.js" />
+    <Content Include="obj\Debug\UBERREP.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\UBERREP.dll" />
+    <Content Include="obj\Debug\UBERREP.pdb" />
+    <Content Include="obj\Release\UBERREP.csproj.FileListAbsolute.txt" />
     <Content Include="Product.aspx" />
-    <Content Include="Users\Default.aspx" />
-    <Content Include="Users\User.aspx" />
-    <Content Include="Users\UserGroup.aspx" />
-    <Content Include="Users\UserGroups.aspx" />
+    <Content Include="SampleFiles\About Us.html" />
+    <Content Include="SampleFiles\contact.html" />
+    <Content Include="SampleFiles\index.html" />
+    <Content Include="SampleFiles\Product.html" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Signup.aspx" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="UB.Admin\AdminDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,20 +190,6 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Clients\Client.aspx.cs">
-      <DependentUpon>Client.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Clients\Client.aspx.designer.cs">
-      <DependentUpon>Client.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Clients\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Clients\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -239,38 +233,51 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="masterPages\Dashboard.Master.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterPages\Dashboard.Master.designer.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterPages\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterPages\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Users\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Users\User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users\User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Users\UserGroup.aspx.cs">
-      <DependentUpon>UserGroup.aspx</DependentUpon>
+    <Compile Include="UB.Admin\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users\UserGroup.aspx.designer.cs">
-      <DependentUpon>UserGroup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\UserGroups.aspx.cs">
-      <DependentUpon>UserGroups.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\UserGroups.aspx.designer.cs">
-      <DependentUpon>UserGroups.aspx</DependentUpon>
+    <Compile Include="UB.Admin\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebLogic\DisplayMessage.cs" />
     <Compile Include="WebLogic\WebLogic.cs">
@@ -279,6 +286,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.Master" />
+    <Content Include="Fakes\BusinessLayer.fakes" />
+    <Content Include="masterPages\Dashboard.Master" />
+    <Content Include="masterPages\Home.Master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\UBERREP.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\UBERREP.csprojResolveAssemblyReference.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -291,6 +305,10 @@
       <Project>{1a062029-39dc-411d-954c-5a3a50fd94c0}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -305,7 +323,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>49777</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:7949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

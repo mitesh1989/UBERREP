@@ -5,22 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace UBERREP.Admin
+namespace Uberrep
 {
-    public partial class Contact : WebLogic.WebPage
+    public partial class Contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public override bool ValidateInput(out string errorMessage)
-        {
-            errorMessage = string.Empty;
-
-
-
-            return !string.IsNullOrEmpty(errorMessage);
         }
     }
 }

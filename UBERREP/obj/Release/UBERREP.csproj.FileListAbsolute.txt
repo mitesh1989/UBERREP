@@ -1,0 +1,7 @@
+E:\UBERREP\UBERREP\bin\UBERREP.dll
+E:\UBERREP\UBERREP\bin\UBERREP.pdb
+E:\UBERREP\UBERREP\bin\BusinessLayer.dll
+E:\UBERREP\UBERREP\bin\BusinessLayer.pdb
+E:\UBERREP\UBERREP\obj\Release\UBERREP.csprojResolveAssemblyReference.cache
+E:\UBERREP\UBERREP\obj\Release\UBERREP.dll
+E:\UBERREP\UBERREP\obj\Release\UBERREP.pdb

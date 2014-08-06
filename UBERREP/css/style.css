@@ -5,7 +5,7 @@ Description: Grepfrut is a responsive software WordPress Theme designed and deve
 Version: 2.0.0
 Author: Tansh
 Author URI: http://themeforest.net/user/tansh
-Tags: left-sidebar, right-sidebar, editor-style, featured-../images, post-formats, sticky-post, translation-ready
+Tags: left-sidebar, right-sidebar, editor-style, featured-images, post-formats, sticky-post, translation-ready
 License:  GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
@@ -1085,83 +1085,83 @@ sup {
 	opacity: .7;
 }
 .address-icon {
-	background: url(../images/icon-address.png);
+	background: url(img/icons/social-icons/icon-address.png);
 	margin-bottom: 20px;
 }
 .mail-icon {
-	background: url(../images/icon-mail.png);
+	background: url(img/icons/social-icons/icon-mail.png);
 }
 .phone-icon {
-	background: url(../images/icon-phone.png);
+	background: url(img/icons/social-icons/icon-phone.png);
 }
 .aim-icon {
-	background: url(../images/social-icon-aim.png);
+	background: url(img/icons/social-icons/social-icon-aim.png);
 }
 .behance-icon {
-	background:url(../images/social-icon-behance.png);
+	background:url(img/icons/social-icons/social-icon-behance.png);
 }
 .deviantart-icon {
-	background:url(../images/social-icon-deviantart.png);
+	background:url(img/icons/social-icons/social-icon-deviantart.png);
 }
 .dribbble-icon {
-	background:url(../images/social-icon-dribbble.png);
+	background:url(img/icons/social-icons/social-icon-dribbble.png);
 }
 .dropbox-icon {
-	background:url(../images/social-icon-dropbox.png);
+	background:url(img/icons/social-icons/social-icon-dropbox.png);
 }
 .facebook-icon {
-	background:url(../images/social-icon-facebook.png);
+	background:url(img/icons/social-icons/social-icon-facebook.png);
 }
 .fax-icon {
-	background:url(../images/icon-fax.png);
+	background:url(img/icons/social-icons/icon-fax.png);
 }
 .flickr-icon {
-	background:url(../images/social-icon-flickr.png);
+	background:url(img/icons/social-icons/social-icon-flickr.png);
 }
 .forrst-icon {
-	background:url(../images/social-icon-forrst.png);
+	background:url(img/icons/social-icons/social-icon-forrst.png);
 }
 .googleplus-icon {
-	background:url(../images/social-icon-googleplus.png);
+	background:url(img/icons/social-icons/social-icon-googleplus.png);
 }
 .lastfm-icon {
-	background:url(../images/social-icon-lastfm.png);
+	background:url(img/icons/social-icons/social-icon-lastfm.png);
 }
 .link-icon {
-	background:url(../images/icon-link.png);
+	background:url(img/icons/social-icons/icon-link.png);
 }
 .linkedin-icon {
-	background:url(../images/social-icon-linkedin.png);
+	background:url(img/icons/social-icons/social-icon-linkedin.png);
 }
 .picasa-icon {
-	background:url(../images/social-icon-picasa.png);
+	background:url(img/icons/social-icons/social-icon-picasa.png);
 }
 .pinterest-icon {
-	background:url(../images/social-icon-pinterest.png);
+	background:url(img/icons/social-icons/social-icon-pinterest.png);
 }
 .skype-icon {
-	background:url(../images/social-icon-skype.png);
+	background:url(img/icons/social-icons/social-icon-skype.png);
 }
 .tumblr-icon {
-	background:url(../images/social-icon-tumblr.png);
+	background:url(img/icons/social-icons/social-icon-tumblr.png);
 }
 .twitter-icon {
-	background:url(../images/social-icon-twitter.png);
+	background:url(img/icons/social-icons/social-icon-twitter.png);
 }
 .vimeo-icon {
-	background:url(../images/social-icon-vimeo.png);
+	background:url(img/icons/social-icons/social-icon-vimeo.png);
 }
 .yahoo-icon {
-	background:url(../images/social-icon-yahoo.png);
+	background:url(img/icons/social-icons/social-icon-yahoo.png);
 }
 .yelp-icon {
-	background:url(../images/social-icon-yelp.png);
+	background:url(img/icons/social-icons/social-icon-yelp.png);
 }
 .youtube-icon {
-	background:url(../images/social-icon-youtube.png);
+	background:url(img/icons/social-icons/social-icon-youtube.png);
 }
 .rss-icon {
-	background:url(../images/social-icon-rss.png);
+	background:url(img/icons/social-icons/social-icon-rss.png);
 }
 /*----------------------------------------*/
 /*----- 16 Menu / Navigation -----*/

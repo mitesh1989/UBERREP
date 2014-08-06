@@ -81,7 +81,7 @@ namespace UBERREP.Admin.WebLogic
         {
             ClientList.DataTextField = "Name";
             ClientList.DataValueField = "ID";
-            if(BusinessLayer.Common.CurrentContext.CurrentUser!=null && BusinessLayer.Common.CurrentContext.CurrentUser.Type==BusinessLayer.Users.UserTypes.System)
+            if(BusinessLayer.Common.CurrentContext.CurrentUser!=null && BusinessLayer.Common.CurrentContext.CurrentUser.Type==BusinessLayer.Users.UserTypes.Retailer)
                 ClientList.DataSource = BusinessLayer.Client.ClientManager.GetClients(null);
             else
                 ClientList.DataSource = BusinessLayer.Common.CurrentContext.CurrentUser.Clients;
@@ -213,7 +213,7 @@ namespace UBERREP.Admin.WebLogic
         /// </summary>
         public bool IsSystemUser
         {
-            get { return this.IsUserLoggedIn && BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.System; }
+            get { return this.IsUserLoggedIn && BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Retailer; }
         }
 
         /// <summary>

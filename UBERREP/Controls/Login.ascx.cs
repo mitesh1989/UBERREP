@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BusinessLayer.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using BusinessLayer.Common;
 using UBERREP.BusinessLayer.Common;
+
 
 namespace UBERREP.Controls
 {
@@ -14,7 +15,7 @@ namespace UBERREP.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             //added to login when return key is hit - as hidden image button is made default
-            this.Page.Form.DefaultButton = BTNLogin.UniqueID;
+            this.Page.Form.DefaultButton = this.send.UniqueID;
             this.TXTUserName.Focus();
         }
 

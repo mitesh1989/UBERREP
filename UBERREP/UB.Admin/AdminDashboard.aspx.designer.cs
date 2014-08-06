@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Uberrep
+namespace Uberrep.UI.UB.Admin
 {
 
 
-    public partial class Index
+    public partial class AdminDashboard
     {
     }
 }

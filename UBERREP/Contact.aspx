@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true"
-    CodeBehind="Contact.aspx.cs" Inherits="UBERREP.Admin.Contact" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Home.Master" AutoEventWireup="true"
+    CodeBehind="Contact.aspx.cs" Inherits="Uberrep.Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="DataContentPlaceHolder" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <section id="page-header" class="clearfix">
     <div class="container">
         <div class="row">
