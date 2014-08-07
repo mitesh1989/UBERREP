@@ -38,11 +38,25 @@ namespace UBERREP.Controls
             return retObj;
         }
 
-        protected void BTNSave_Click(object sender, EventArgs e)
-        {            
-            BusinessLayer.Users.UserManager.Create(PrePareEntity());
-            UBERREP.BusinessLayer.Common.EmailManager.SendGMail(TXTEmail.Text.Trim(), "Account Created", "Your account with UBERREP has been created<br/>Thanks", null);
 
+        public void clear() {
+            TXTConfirmPassword.Text = "";
+            TXTEmail.Text = "";
+            TXTName.Text = "";
+            TXTPassword.Text="";
+        }
+        protected void BTNSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BusinessLayer.Users.UserManager.Create(PrePareEntity());
+                UBERREP.BusinessLayer.Common.EmailManager.SendGMail(TXTEmail.Text.Trim(), "Account Created", "Your account with UBERREP has been created<br/>Thanks", null);
+                clear();
+                lblMsg.Text = "Your account with UBERREP has been created.";
+            }
+            catch (Exception ex) {
+                lblMsg.Text = "There is some error ! Try again later";
+            }
         }
 
         protected void BTNCancel_Click(object sender, EventArgs e)

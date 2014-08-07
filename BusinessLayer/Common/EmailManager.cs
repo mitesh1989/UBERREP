@@ -87,8 +87,10 @@ namespace UBERREP.BusinessLayer.Common
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     Credentials = new System.Net.NetworkCredential("odeskteam301@gmail.com", "odeskteam@301"),
                     Timeout = 30000,
+                   
                 };
                 System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage("odeskteam301@gmail.com", toList, subject, body);
+                message.IsBodyHtml = true;
                 smtp.Send(message);
 
             }

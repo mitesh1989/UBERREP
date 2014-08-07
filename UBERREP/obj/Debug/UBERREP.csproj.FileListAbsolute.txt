@@ -5,13 +5,6 @@ E:\Personal\UBERREP\UBERREP\bin\BusinessLayer.pdb
 E:\Personal\UBERREP\UBERREP\obj\Debug\UBERREP.csprojResolveAssemblyReference.cache
 E:\Personal\UBERREP\UBERREP\obj\Debug\UBERREP.dll
 E:\Personal\UBERREP\UBERREP\obj\Debug\UBERREP.pdb
-E:\UBERREP\UBERREP\obj\Debug\UBERREP.csprojResolveAssemblyReference.cache
-E:\UBERREP\UBERREP\bin\UBERREP.dll
-E:\UBERREP\UBERREP\bin\UBERREP.pdb
-E:\UBERREP\UBERREP\bin\BusinessLayer.dll
-E:\UBERREP\UBERREP\bin\BusinessLayer.pdb
-E:\UBERREP\UBERREP\obj\Debug\UBERREP.dll
-E:\UBERREP\UBERREP\obj\Debug\UBERREP.pdb
 C:\Users\RAM\Desktop\new\UBERREP\bin\UBERREP.dll
 C:\Users\RAM\Desktop\new\UBERREP\bin\UBERREP.pdb
 C:\Users\RAM\Desktop\new\UBERREP\bin\BusinessLayer.dll
@@ -19,3 +12,10 @@ C:\Users\RAM\Desktop\new\UBERREP\bin\BusinessLayer.pdb
 C:\Users\RAM\Desktop\new\UBERREP\obj\Debug\UBERREP.csprojResolveAssemblyReference.cache
 C:\Users\RAM\Desktop\new\UBERREP\obj\Debug\UBERREP.dll
 C:\Users\RAM\Desktop\new\UBERREP\obj\Debug\UBERREP.pdb
+E:\UBERREP\UBERREP\bin\UBERREP.dll
+E:\UBERREP\UBERREP\bin\UBERREP.pdb
+E:\UBERREP\UBERREP\bin\BusinessLayer.dll
+E:\UBERREP\UBERREP\bin\BusinessLayer.pdb
+E:\UBERREP\UBERREP\obj\Debug\UBERREP.csprojResolveAssemblyReference.cache
+E:\UBERREP\UBERREP\obj\Debug\UBERREP.dll
+E:\UBERREP\UBERREP\obj\Debug\UBERREP.pdb

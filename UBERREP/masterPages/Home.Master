@@ -345,7 +345,7 @@
  
  <!-- display popup -->
  <li id="menu-item-1141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1141">
-		<h6 id = "popup" onclick ="div_show()">SIGN IN</h6></li>
+		<h6 id = "popup"  onclick ="div_show()">SIGN IN</h6></li>
 
  <!-- Popup div starts here -->
  <div id="popupContact">
