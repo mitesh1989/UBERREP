@@ -17,7 +17,7 @@ namespace UBERREP
         {
             BusinessLayer.Common.CurrentContext.CurrentUser = null;
             this.Session.Abandon();
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/Index.aspx");
         }
     }
 }
