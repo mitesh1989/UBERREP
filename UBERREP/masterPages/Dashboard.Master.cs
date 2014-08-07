@@ -11,7 +11,14 @@ namespace Uberrep.UI.masterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+        
 
+        protected void LNKLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Index.aspx");
         }
     }
 }

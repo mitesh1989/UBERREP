@@ -89,7 +89,8 @@
                                 <li><a href="User Profile.html"><i class="icon-user"></i>My Profile</a></li>
                                 <li><a href="#"><i class="icon-tasks"></i>My Tasks</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+                                <li>
+                                    <asp:LinkButton ID="LNKLogOut" runat="server" OnClick="LNKLogOut_Click" ForeColor="Red"><i class="icon-key"></i>Log Out</asp:LinkButton></li>
                             </ul>
                         </li>
                         <!-- END USER LOGIN DROPDOWN -->
