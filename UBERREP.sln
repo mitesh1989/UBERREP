@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UBERREP", "UBERREP\UBERREP.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1A062029-39DC-411D-954C-5A3A50FD94C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uberrep.UI", "C:\Users\akki\Desktop\Uberrep.UI\Uberrep.UI\Uberrep.UI\Uberrep.UI.csproj", "{BB488FFA-CF0A-4E39-9C79-613558BCA663}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +23,6 @@ Global
 		{1A062029-39DC-411D-954C-5A3A50FD94C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A062029-39DC-411D-954C-5A3A50FD94C0}.UBERREP|Any CPU.ActiveCfg = Release|Any CPU
 		{1A062029-39DC-411D-954C-5A3A50FD94C0}.UBERREP|Any CPU.Build.0 = Release|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.UBERREP|Any CPU.ActiveCfg = UBERREP|Any CPU
-		{BB488FFA-CF0A-4E39-9C79-613558BCA663}.UBERREP|Any CPU.Build.0 = UBERREP|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
