@@ -15,7 +15,7 @@ namespace UBERREP.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             //added to login when return key is hit - as hidden image button is made default
-            this.Page.Form.DefaultButton = this.send.UniqueID;
+            //this.Page.Form.DefaultButton = this.send.UniqueID;
             this.TXTUserName.Focus();
         }
 

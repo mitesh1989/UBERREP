@@ -13,5 +13,10 @@ namespace UBERREP.Controls
 
     public partial class SignUp
     {
+        protected global::System.Web.UI.WebControls.TextBox TXTName;
+        protected global::System.Web.UI.WebControls.TextBox TXTEmail;
+        protected global::System.Web.UI.WebControls.TextBox TXTPassword;
+        protected global::System.Web.UI.WebControls.TextBox TXTConfirmPassword;
+        protected global::System.Web.UI.WebControls.Button BTNSave;
     }
 }
