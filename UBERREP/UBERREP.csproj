@@ -997,7 +997,6 @@
     <Content Include="js\query.elastislide.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\selectnav.js" />
-    <Content Include="Login.aspx" />
     <Content Include="logo\generic.css" />
     <Content Include="logo\loading.gif" />
     <Content Include="logo\navbuttons.png" />
@@ -1221,13 +1220,6 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin.Master.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.Master.designer.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1262,13 +1254,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="masterPages\Dashboard.Master.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
@@ -1322,7 +1307,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin.Master" />
     <Content Include="Fakes\BusinessLayer.fakes" />
     <Content Include="masterPages\Dashboard.Master" />
     <Content Include="masterPages\Home.Master" />

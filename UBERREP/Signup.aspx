@@ -15,19 +15,19 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
 
-        <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all">
-        <link rel="stylesheet" id="Link1" href="css/elements.css" type="text/css" media="all">
+        <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="Link1" href="css/elements.css" type="text/css" media="all" />
 
-        <link rel="stylesheet" id="rs-settings-css" href="css/settings.css" type="text/css" media="all">
-        <link rel="stylesheet" id="rs-captions-css" href="css/dynamic-captions.css" type="text/css" media="all">
-        <link rel="stylesheet" id="rs-plugin-static-css" href="css/static-captions.css" type="text/css" media="all">
+        <link rel="stylesheet" id="rs-settings-css" href="css/settings.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="rs-captions-css" href="css/dynamic-captions.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="rs-plugin-static-css" href="css/static-captions.css" type="text/css" media="all" />
         <link rel="stylesheet" id="tcsn_typography_Raleway:400,600-css" href="http://fonts.googleapis.com/css?family=Raleway:400,600" type="text/css" media="all">
-        <link rel="stylesheet" id="bootstrap-style-css" href="css/bootstrap.css" type="text/css" media="all">
-        <link rel="stylesheet" id="style-main-css" href="css/style.css" type="text/css" media="all">
-        <link rel="stylesheet" id="elastislide-style-css" href="css/elastislide.css" type="text/css" media="all">
-        <link rel="stylesheet" id="bootstrap-override-css" href="css/bootstrap-override.css" type="text/css" media="all">
-        <link rel="stylesheet" id="rev-custom-style-css" href="css/rev-custom.css" type="text/css" media="all">
-        <link rel="stylesheet" id="responsive-css" href="css/responsive.css" type="text/css" media="all">
+        <link rel="stylesheet" id="bootstrap-style-css" href="css/bootstrap.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="style-main-css" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="elastislide-style-css" href="css/elastislide.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="bootstrap-override-css" href="css/bootstrap-override.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="rev-custom-style-css" href="css/rev-custom.css" type="text/css" media="all" />
+        <link rel="stylesheet" id="responsive-css" href="css/responsive.css" type="text/css" media="all" />
 
         <style type="text/css">
             body
@@ -287,15 +287,15 @@
                 color: #d95b44;
             }
         </style>
-        <script async="" src="//www.google-analytics.com/analytics.js"></script>
-        <script async="" src="//www.google-analytics.com/analytics.js"></script>
+        <script src="//www.google-analytics.com/analytics.js" type="text/javascript"></script>
+        <script src="//www.google-analytics.com/analytics.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
         <script type="text/javascript" src="js/anti-spam.js"></script>
         <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
         <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
 
-        <style>
+        <style type="text/css">
             body
             {
                 background-color: #f2f2f2;
@@ -315,8 +315,7 @@
 
             #slider-bg
             {
-                background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/slider-bg/slider-background1.jpg );
-                background-color:;
+                background-image: url( http://wordpress.tanshcreative.com/grepfrut/wp-content/themes/grepfrut/img/slider-bg/slider-background1.jpg );                
             }
 
             #footer
