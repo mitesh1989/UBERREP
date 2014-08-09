@@ -1210,6 +1210,10 @@
     <Content Include="Signup.aspx" />
     <Content Include="TestPage.aspx" />
     <Content Include="UB.Admin\AdminDashboard.aspx" />
+    <Content Include="Users\Default.aspx" />
+    <Content Include="Users\User.aspx" />
+    <Content Include="Users\UserGroup.aspx" />
+    <Content Include="Users\UserGroups.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1300,6 +1304,34 @@
     </Compile>
     <Compile Include="UB.Admin\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserGroup.aspx.cs">
+      <DependentUpon>UserGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserGroup.aspx.designer.cs">
+      <DependentUpon>UserGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserGroups.aspx.cs">
+      <DependentUpon>UserGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserGroups.aspx.designer.cs">
+      <DependentUpon>UserGroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebLogic\DisplayMessage.cs" />
     <Compile Include="WebLogic\WebLogic.cs">

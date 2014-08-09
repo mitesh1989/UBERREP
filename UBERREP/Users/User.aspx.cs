@@ -94,14 +94,14 @@ namespace UBERREP.Admin.Users
         private void FillUserGroups()
         {
             System.Collections.Specialized.NameValueCollection data = new System.Collections.Specialized.NameValueCollection();;
-            if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0 && BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client)
-            {
-                data.Add("ClientID", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID.ToString());
-            }
-            else if (!LSTClients.SelectedValue.Equals("0"))
-            {                
-                data.Add("ClientID", LSTClients.SelectedValue.ToString());
-            }
+            //if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0 && BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client)
+            //{
+            //    data.Add("ClientID", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID.ToString());
+            //}
+            //else if (!LSTClients.SelectedValue.Equals("0"))
+            //{                
+            //    data.Add("ClientID", LSTClients.SelectedValue.ToString());
+            //}
             
                 LSTGroups.DataTextField = "Name";
                 LSTGroups.DataValueField = "ID";
@@ -137,8 +137,8 @@ namespace UBERREP.Admin.Users
             {
                 item.Selected = this.EntityToEdit.Groups.Any(c => c.ID == int.Parse(item.Value));
             }
-            if (this.EntityToEdit != null && this.EntityToEdit.Type == BusinessLayer.Users.UserTypes.Client && this.EntityToEdit.Clients != null & this.EntityToEdit.Clients.Count > 0)
-                this.LSTClients.SelectedValue = this.EntityToEdit.Clients[0].ID.ToString();
+            //if (this.EntityToEdit != null && this.EntityToEdit.Type == BusinessLayer.Users.UserTypes.Client && this.EntityToEdit.Clients != null & this.EntityToEdit.Clients.Count > 0)
+            //    this.LSTClients.SelectedValue = this.EntityToEdit.Clients[0].ID.ToString();
 
             this.TXTUserName.Enabled = false;//make it non editable when displaying            
             this.DRPStatus.SelectedValue = ((int)this.EntityToEdit.Status).ToString();
@@ -183,23 +183,23 @@ namespace UBERREP.Admin.Users
             if(!string.IsNullOrEmpty(retObj.ClientsToSave))
                 retObj.ClientsToSave = retObj.ClientsToSave.Trim(',');
 
-            if (this.IsSystemUser)
-                retObj.Type = (BusinessLayer.Users.UserTypes)int.Parse(DRPType.SelectedValue);
-            else if (this.EntityToEdit != null)
-                retObj.Type = this.EntityToEdit.Type;
-            else if(this.EntityToEdit==null)
-            {
-                retObj.Type = BusinessLayer.Users.UserTypes.Client;
-            }
+            //if (this.IsSystemUser)
+            //    retObj.Type = (BusinessLayer.Users.UserTypes)int.Parse(DRPType.SelectedValue);
+            //else if (this.EntityToEdit != null)
+            //    retObj.Type = this.EntityToEdit.Type;
+            //else if(this.EntityToEdit==null)
+            //{
+            //    retObj.Type = BusinessLayer.Users.UserTypes.Client;
+            //}
             
             
 
-            if (this.IsSystemUser && retObj.Type == BusinessLayer.Users.UserTypes.Client && string.IsNullOrEmpty(retObj.ClientsToSave))
-            {
-                this.DisplayMessage = new WebLogic.ErrorMessage("Invalid Input", "Please select atleast one client");
-                LSTClients.Visible = true;
-                return null;
-            }
+            //if (this.IsSystemUser && retObj.Type == BusinessLayer.Users.UserTypes.Client && string.IsNullOrEmpty(retObj.ClientsToSave))
+            //{
+            //    this.DisplayMessage = new WebLogic.ErrorMessage("Invalid Input", "Please select atleast one client");
+            //    LSTClients.Visible = true;
+            //    return null;
+            //}
 
             retObj.Status = (Status)int.Parse(DRPStatus.SelectedValue);
             
@@ -237,10 +237,10 @@ namespace UBERREP.Admin.Users
             }
             if ((!this.IsSystemUser &&!Hasgroup))
                 ErrorMessage += "Assign at least one user group<br/>";
-            if(this.IsSystemUser && ((BusinessLayer.Users.UserTypes)int.Parse(DRPType.SelectedValue))  == (BusinessLayer.Users.UserTypes.Client) && LSTClients.SelectedItem==null)
-                ErrorMessage += "Please select one client for non system user<br/>";
-            if (((BusinessLayer.Users.UserTypes)int.Parse(this.DRPType.SelectedValue))== BusinessLayer.Users.UserTypes.Client && !Hasgroup)
-                ErrorMessage += "Assign at least one user group<br/>";
+            //if(this.IsSystemUser && ((BusinessLayer.Users.UserTypes)int.Parse(DRPType.SelectedValue))  == (BusinessLayer.Users.UserTypes.Client) && LSTClients.SelectedItem==null)
+            //    ErrorMessage += "Please select one client for non system user<br/>";
+            //if (((BusinessLayer.Users.UserTypes)int.Parse(this.DRPType.SelectedValue))== BusinessLayer.Users.UserTypes.Client && !Hasgroup)
+            //    ErrorMessage += "Assign at least one user group<br/>";
             //if(this.IsSystemUser && (BusinessLayer.Users.UserTypes)int.Parse(DRPType.SelectedValue)==BusinessLayer.Users.UserTypes.System && Hasgroup)
             //    ErrorMessage += "System User can not be assigned any group<br/>";
             if (!TXTPassword.Text.Trim().Equals(TXTConfirmPassword.Text)) ErrorMessage += "Password and Confirm Password do not match<br>";
@@ -258,17 +258,17 @@ namespace UBERREP.Admin.Users
                 if (obj == null) return;
                 this.Save(obj);
                 //save Client users
-                if (this.EntityToEdit == null && obj.Type == BusinessLayer.Users.UserTypes.Client)//new then use newly inserted user's ID
-                    BusinessLayer.Users.UserManager.ManageClientUsers(BusinessLayer.DbOperationMode.Insert, obj.ID, obj.ClientsToSave);
-                else//use entitytoedit's id
-                {
-                    if(!string.IsNullOrEmpty(obj.ClientsToSave) && obj.Type== BusinessLayer.Users.UserTypes.Client)//offie user then only insert to Clientusers table
-                        BusinessLayer.Users.UserManager.ManageClientUsers(BusinessLayer.DbOperationMode.Update, this.EntityToEdit.ID, obj.ClientsToSave);
-                }
+                //if (this.EntityToEdit == null && obj.Type == BusinessLayer.Users.UserTypes.Client)//new then use newly inserted user's ID
+                //    BusinessLayer.Users.UserManager.ManageClientUsers(BusinessLayer.DbOperationMode.Insert, obj.ID, obj.ClientsToSave);
+                //else//use entitytoedit's id
+                //{
+                //    if(!string.IsNullOrEmpty(obj.ClientsToSave) && obj.Type== BusinessLayer.Users.UserTypes.Client)//offie user then only insert to Clientusers table
+                //        BusinessLayer.Users.UserManager.ManageClientUsers(BusinessLayer.DbOperationMode.Update, this.EntityToEdit.ID, obj.ClientsToSave);
+                //}
 
-                //save assigned groups to user         
-                if((this.EntityToEdit!=null && obj.Type != BusinessLayer.Users.UserTypes.System) || this.EntityToEdit == null)//edit mode and user type is being switched from System to Client - then do not save user allowed groups - "ManageUsers"-SP[Save method] has already assigned him system group OR new user then go for insert
-                    BusinessLayer.Users.UserGroupManager.SaveAllowedUserGroups(this.EntityToEdit != null ? this.EntityToEdit.ID : obj.ID, PrepareUserGroups());
+                ////save assigned groups to user         
+                //if((this.EntityToEdit!=null && obj.Type != BusinessLayer.Users.UserTypes.System) || this.EntityToEdit == null)//edit mode and user type is being switched from System to Client - then do not save user allowed groups - "ManageUsers"-SP[Save method] has already assigned him system group OR new user then go for insert
+                //    BusinessLayer.Users.UserGroupManager.SaveAllowedUserGroups(this.EntityToEdit != null ? this.EntityToEdit.ID : obj.ID, PrepareUserGroups());
 
                 if(this.EntityToEdit !=null && BusinessLayer.Common.CurrentContext.CurrentUser!=null && this.EntityToEdit.ID == BusinessLayer.Common.CurrentContext.CurrentUser.ID)
                     BusinessLayer.Common.CurrentContext.CurrentUser = BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(obj);

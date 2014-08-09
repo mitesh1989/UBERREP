@@ -205,12 +205,12 @@ namespace UBERREP.Admin.Users
 
         protected void RPTRSectionRights_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
-            {
-                BusinessLayer.Users.GroupSectionRole obj = e.Item.DataItem as BusinessLayer.Users.GroupSectionRole;
-                if (BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client && obj.Section.Type == BusinessLayer.Users.UserTypes.System)
-                    e.Item.Visible = false;
-            }
+            //if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
+            //{
+            //    BusinessLayer.Users.GroupSectionRole obj = e.Item.DataItem as BusinessLayer.Users.GroupSectionRole;
+            //    if (BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client && obj.Section.Type == BusinessLayer.Users.UserTypes.System)
+            //        e.Item.Visible = false;
+            //}
         }               
     }
 }

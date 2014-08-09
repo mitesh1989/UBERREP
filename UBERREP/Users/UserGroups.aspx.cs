@@ -113,13 +113,13 @@ namespace UBERREP.Admin.Users
 
         protected void RPTRUserGroups_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
-            {
-                if (((BusinessLayer.Users.UserGroup)e.Item.DataItem).ClientID.Equals("-9999") && (BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client))
-                {
-                    ((LinkButton)e.Item.FindControl("BTNEdit")).Visible = ((LinkButton)e.Item.FindControl("BTNDelete")).Visible = false;//
-                }
-            }
+            //if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            //{
+            //    if (((BusinessLayer.Users.UserGroup)e.Item.DataItem).ClientID.Equals("-9999") && (BusinessLayer.Common.CurrentContext.CurrentUser.Type == BusinessLayer.Users.UserTypes.Client))
+            //    {
+            //        ((LinkButton)e.Item.FindControl("BTNEdit")).Visible = ((LinkButton)e.Item.FindControl("BTNDelete")).Visible = false;//
+            //    }
+            //}
         }        
     }    
 }
