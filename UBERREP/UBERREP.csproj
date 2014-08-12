@@ -905,6 +905,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\SignUp.ascx" />
+    <Content Include="Controls\UsersList.ascx" />
     <Content Include="css\bootstrap-override.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -1246,6 +1247,13 @@
     </Compile>
     <Compile Include="Controls\SignUp.ascx.designer.cs">
       <DependentUpon>SignUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsersList.ascx.cs">
+      <DependentUpon>UsersList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UsersList.ascx.designer.cs">
+      <DependentUpon>UsersList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
