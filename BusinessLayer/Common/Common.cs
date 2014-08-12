@@ -2,13 +2,68 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using UBERREP.BusinessLayer.Common;
 
 namespace BusinessLayer.Common
 {
     public class Common
     {
+       
+        public static string ValidateLogin(string userName, string passWord)
+        {
+            string result = string.Empty;
+            if (String.IsNullOrEmpty(userName) && string.IsNullOrEmpty(passWord))
+            {
 
+                return "Username and Password Required";
+            }
+            if (String.IsNullOrEmpty(userName))
+            {
+
+                return "Username Required";
+            }
+            if (String.IsNullOrEmpty(passWord))
+            {
+
+                return "Password Required";
+            }
+            UBERREP.BusinessLayer.Users.User loggedInUser = UBERREP.BusinessLayer.Users.UserManager.ValidateUser(userName, passWord);
+
+
+            if (loggedInUser != null)
+            {// username and password validated
+                switch (loggedInUser.Status)
+                {
+                    case Status.Active:
+                        {
+                            CurrentContext.CurrentUser = loggedInUser;
+                            loggedInUser = UBERREP.BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(loggedInUser);
+                            result = "Success";
+                            break;
+                        }
+                    case Status.Suspended:
+                        {
+                            result = "User account suspended";
+                            //this.LBLErrorMessage.Text = "User account suspended";
+                            break;
+                        }
+                    case Status.Deleted:
+                        {
+                            result = "User account deleted";
+                            //this.LBLErrorMessage.Text = "User account deleted";
+                            break;
+                        }
+                }
+            }
+            else
+            {
+                result = "Invalid Credential";
+                //this.LBLErrorMessage.Text = "Invalid Credentials, Please enter correct username or password";
+            }
+            return result;
+        }
     }
+
     public enum Status
     {
         Active = 1,
@@ -68,5 +123,5 @@ namespace BusinessLayer.Common
 
             return retStr; // == string.Empty ? null : retStr;
         }
-    }   
+    }
 }

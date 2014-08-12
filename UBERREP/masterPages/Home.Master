@@ -306,11 +306,16 @@
             background-repeat: repeat;
         }
     </style>
+    <script type="text/javascript" src="../Scripts/jquery-1.4.1-vsdoc.js"></script>
+    <script type="text/javascript"  src="../Scripts/jquery-1.4.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="../js/anti-spam.js"></script>
     <script type="text/javascript" src="../js/jquery.themepunch.plugins.min.js"></script>
     <script type="text/javascript" src="../js/jquery.themepunch.revolution.min.js"></script>
+     
+  
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

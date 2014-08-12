@@ -13,5 +13,10 @@ namespace Uberrep
         {
 
         }
+        [System.Web.Services.WebMethod]
+        public static string ValidateLogin(string userName, string passWord)
+        {
+            return BusinessLayer.Common.Common.ValidateLogin(userName, passWord);
+        }
     }
 }

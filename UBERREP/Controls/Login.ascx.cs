@@ -16,61 +16,61 @@ namespace UBERREP.Controls
         {
             //added to login when return key is hit - as hidden image button is made default
             //this.Page.Form.DefaultButton = this.send.UniqueID;
-            this.TXTUserName.Focus();
+            this.txtUserName.Focus();
         }
+      
+        //public bool ValidateInput(out string errorMessage)
+        //{
+        //    errorMessage = string.Empty;
 
-        public bool ValidateInput(out string errorMessage)
-        {
-            errorMessage = string.Empty;
+        //    if (!this.txtUserName.IsValidInput(InputType.Username)) errorMessage += "Invalid Input - UserName";
+        //    if (!this.txtPassword.IsValidInput(InputType.Password)) errorMessage += "Invalid Input - Password";
 
-            if (!this.TXTUserName.IsValidInput(InputType.Username)) errorMessage += "Invalid Input - UserName";
-            if (!this.txtPassword.IsValidInput(InputType.Password)) errorMessage += "Invalid Input - Password";
+        //    return !string.IsNullOrEmpty(errorMessage);
+        //}
 
-            return !string.IsNullOrEmpty(errorMessage);
-        }
-
-        protected void BTNLogin_Click(object sender, EventArgs e)
-        {
-            string errMessage = string.Empty;
-            if (this.ValidateInput(out errMessage))
-            {
-                //this.LBLErrorMessage.Text = errMessage;
-            }
-            else
-            {
-                UBERREP.BusinessLayer.Users.User loggedInUser = UBERREP.BusinessLayer.Users.UserManager.ValidateUser(this.TXTUserName.Text.Trim(), this.txtPassword.Text.Trim());
+        //protected void BTNLogin_Click(object sender, EventArgs e)
+        //{
+        //    string errMessage = string.Empty;
+        //    if (this.ValidateInput(out errMessage))
+        //    {
+        //        //this.LBLErrorMessage.Text = errMessage;
+        //    }
+        //    else
+        //    {
+        //        UBERREP.BusinessLayer.Users.User loggedInUser = UBERREP.BusinessLayer.Users.UserManager.ValidateUser(this.TXTUserName.Text.Trim(), this.txtPassword.Text.Trim());
 
 
-                if (loggedInUser != null)
-                {// username and password validated
-                    switch (loggedInUser.Status)
-                    {
-                        case Status.Active:
-                            {
-                                CurrentContext.CurrentUser = loggedInUser;
-                                loggedInUser = UBERREP.BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(loggedInUser);
-                                Response.Redirect("~/DashBoard.aspx", true);
-                                break;
-                            }
-                        case Status.Suspended:
-                            {
-                                //this.LBLErrorMessage.Text = "User account suspended";
-                                break;
-                            }
-                        case Status.Deleted:
-                            {
-                                //this.LBLErrorMessage.Text = "User account deleted";
-                                break;
-                            }
-                    }
-                }
-                else
-                {
-                    txtPassword.Focus();
-                    //this.LBLErrorMessage.Text = "Invalid Credentials, Please enter correct username or password";
-                }
-            }
-        }
+        //        if (loggedInUser != null)
+        //        {// username and password validated
+        //            switch (loggedInUser.Status)
+        //            {
+        //                case Status.Active:
+        //                    {
+        //                        CurrentContext.CurrentUser = loggedInUser;
+        //                        loggedInUser = UBERREP.BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(loggedInUser);
+        //                        Response.Redirect("~/DashBoard.aspx", true);
+        //                        break;
+        //                    }
+        //                case Status.Suspended:
+        //                    {
+        //                        //this.LBLErrorMessage.Text = "User account suspended";
+        //                        break;
+        //                    }
+        //                case Status.Deleted:
+        //                    {
+        //                        //this.LBLErrorMessage.Text = "User account deleted";
+        //                        break;
+        //                    }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            txtPassword.Focus();
+        //            //this.LBLErrorMessage.Text = "Invalid Credentials, Please enter correct username or password";
+        //        }
+        //    }
+        //}
 
         [System.Web.Services.WebMethod]
         public static string ForgotPassword(string email)

@@ -219,10 +219,10 @@ namespace UBERREP.BusinessLayer.Users
     {
         //System = 1,
         //Client = 2
-        WholeSale_Admin = 1,
-        Sales_Rep_Admin = 2,
-        Sales_Rep_Individual = 3,
-        Retailer = 4
+        WholeSale_Admin = 1,  //Wholesale Admin
+        Sales_Rep_Admin = 2,  //Sales Rep - Admin
+        Sales_Rep_Individual = 3,   //Sales Rep - Individual
+        Retailer = 4  // Retailer
     }
     public class UserManager : Base.BaseManager
     {

@@ -12,9 +12,11 @@ namespace UBERREP.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
+       
+        
         private BusinessLayer.Users.User PrePareEntity()
         {
             BusinessLayer.Users.User retObj = new BusinessLayer.Users.User();
@@ -22,7 +24,7 @@ namespace UBERREP.Controls
                 retObj.Email = retObj.Username = this.TXTEmail.Text.Trim();
 
 
-                retObj.Type = BusinessLayer.Users.UserTypes.Retailer;
+                retObj.Type = (BusinessLayer.Users.UserTypes) Convert.ToInt16(drpRoles.SelectedValue);
             
             
             {
@@ -40,10 +42,7 @@ namespace UBERREP.Controls
 
 
         public void clear() {
-            TXTConfirmPassword.Text = "";
-            TXTEmail.Text = "";
-            TXTName.Text = "";
-            TXTPassword.Text="";
+            TXTConfirmPassword.Text = TXTEmail.Text = TXTName.Text = TXTPassword.Text = string.Empty;
         }
         protected void BTNSave_Click(object sender, EventArgs e)
         {

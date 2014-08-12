@@ -1002,6 +1002,7 @@
     <Content Include="logo\navbuttons.png" />
     <Content Include="logo\slider.css" />
     <Content Include="logo\thumbnail-slider.js" />
+    <Content Include="AjaxCall.aspx" />
     <Content Include="obj\Debug\UBERREP.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\UBERREP.dll" />
     <Content Include="obj\Debug\UBERREP.pdb" />
@@ -1203,6 +1204,7 @@
     <Content Include="assets\jqvmap\.gitignore" />
     <Content Include="assets\jqvmap\README.md" />
     <Content Include="assets\uniform\README.textile" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -1273,6 +1275,13 @@
     <Compile Include="masterPages\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="AjaxCall.aspx.cs">
+      <DependentUpon>AjaxCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxCall.aspx.designer.cs">
+      <DependentUpon>AjaxCall.aspx</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -1332,6 +1341,13 @@
     </Compile>
     <Compile Include="Users\UserGroups.aspx.designer.cs">
       <DependentUpon>UserGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebLogic\DisplayMessage.cs" />
     <Compile Include="WebLogic\WebLogic.cs">
