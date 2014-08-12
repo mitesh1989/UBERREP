@@ -71,7 +71,7 @@
             <div class="navbar-inner">
                 <div class="container-fluid">
                     <!-- BEGIN LOGO -->
-                    <a class="brand" href="Dashboard.html">
+                    <a class="brand" href="../Dashboard.aspx">
                         <img src="" alt="Uberrep" />
                     </a>
                     <!-- END LOGO -->
@@ -83,10 +83,10 @@
                     <!-- BEGIN TOP NAVIGATION MENU -->
                     <ul class="nav pull-right">
                         <li class="dropdown user"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img alt="" src="../assets/img/avatar1_small.jpg" alt="Profile" />
+                            <img alt="" src="../assets/img/avatar1_small.jpg" alt="Profile" style="visibility: hidden;" />
                             <span class="username">User</span> <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="User Profile.html"><i class="icon-user"></i>My Profile</a></li>
+                                <li><a href="../Dashboard.aspx"><i class="icon-user"></i>My Profile</a></li>
                                 <li><a href="#"><i class="icon-tasks"></i>My Tasks</a></li>
                                 <li class="divider"></li>
                                 <li>
@@ -113,7 +113,7 @@
                         </div>
                         <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                     </li>
-                    <li>
+                    <li style="visibility: hidden;">
                         <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
                         <form class="sidebar-search">
                             <div class="input-box">
@@ -124,18 +124,12 @@
                         </form>
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
-                    <li class="start active "><a href="wholesale.html"><i class="icon-home"></i><span
+                    <li class="start active "><a href="../Dashboard.aspx"><i class="icon-home"></i><span
                         class="title">Dashboard</span> <span class="selected"></span></a></li>
-                    <li class="has-sub "><a href="Upload Inventory.html"><i class="icon-bookmark-empty"></i><span class="title">Upload Inventory</span> <span class=""></span></a></li>
-                    <li class="has-sub "><a href="Add Sales.html"><i class="icon-table"></i><span class="title">Add Sales</span> <span class=""></span></a></li>
-                    <li class="has-sub "><a href="Add Retailers.html"><i class="icon-th-list"></i><span
+                    <li class="has-sub "><a href="../UploadInventory.aspx"><i class="icon-bookmark-empty"></i><span class="title">Upload Inventory</span> <span class=""></span></a></li>
+                    <li class="has-sub "><a href="../Sales.aspx"><i class="icon-table"></i><span class="title">Add Sales</span> <span class=""></span></a></li>
+                    <li class="has-sub "><a href="../Retailers.aspx"><i class="icon-th-list"></i><span
                         class="title">Add Retailers</span> <span class=""></span></a></li>
-                    <li class="has-sub "><a href="javascript:;"><i class="icon-briefcase"></i><span class="title">Extra</span> <span class="arrow "></span></a>
-                        <ul class="sub">
-                            <li><a href="User Profile.html">User Profile</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub "><a href="Login.html"><i class="icon-user"></i><span class="title">Login</span> <span class=""></span></a></li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>
