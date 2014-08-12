@@ -17,7 +17,7 @@
             </ul>
         </div>
     </div>
-    <asp:Repeater ID="UserListRPT" runat="server">
+    <asp:Repeater ID="UserListRPT" runat="server" >
         <HeaderTemplate>
             <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
                 <thead>
@@ -40,15 +40,24 @@
                     <asp:TextBox ID="TXT_username" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
                 </td>
                 <td>
-                    <asp:Literal ID="lit_Age" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' />
-                    <asp:TextBox ID="fld_Age" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' Columns="4" Visible="false" />
+                    <asp:Literal ID="lit_FullName" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' />
+                    <asp:TextBox ID="txt_FullName" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>'  Visible="false" />
                 </td>
-                <td><%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%></td>
-                <td><%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%></td>
                 <td>
-                    <asp:LinkButton ID="lnk_Edit" runat="server" Text="Edit" CommandName="EditThis" /></td>
+                    <asp:Literal ID="lit_Point" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' />
+                    <asp:TextBox ID="txt_Point" Columns="4"  runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' Visible="false"/>
+                </td>
                 <td>
-                    <asp:LinkButton ID="lnk_Cancel" runat="server" Text="Cancel" CommandName="CancelEdit" Visible="false" />
+                    <asp:Literal ID="lit_Notes" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' />
+                    <asp:TextBox ID="txt_Notes" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' Visible="false"/>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lnk_Edit" runat="server" Text="Edit" CommandName="Edit"  />
+                     <asp:LinkButton ID="lnk_Update" Visible="false" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).ID%>'  />
+                     <asp:LinkButton ID="lnk_Cancel" visible="false" runat="server" Text="Cancel" CommandName="Cancel"  />
+                </td>
+                <td>
+                    <asp:LinkButton ID="lnk_delete" runat="server" Text="Delete"  CommandArgument='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).ID%>'  CommandName="Delete" OnClientClick='javascript:return confirm("Are you sure you want to delete?")'   />
 
                 </td>
             </tr>

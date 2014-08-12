@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="UBERREP.WebForm1" %>
 
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="uc1" TagName="Login" %>
+<%@ Register Src="~/Controls/UsersList.ascx" TagPrefix="uc1" TagName="UsersList" %>
+
 
 
 <!DOCTYPE html>
@@ -15,7 +17,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <uc1:Login runat="server" ID="Login" />
+     
+        <uc1:UsersList runat="server" ID="UserListUC" />
     </div>
     </form>
 </body>
