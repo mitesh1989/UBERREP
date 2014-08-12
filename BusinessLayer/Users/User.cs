@@ -22,6 +22,15 @@ namespace UBERREP.BusinessLayer.Users
         [System.Xml.Serialization.XmlAttribute]
         public UserTypes Type;
 
+        public decimal Points;
+
+
+        public Gender Gender;
+
+        public string Remarks;
+
+        public BusinessLayer.Payment.PaymentInfo PaymentInfo;
+
         //public static object lockObj = new object();//to prevent dictionary from being modified by more than one object at the same time - by obtaining lock on that object
 
         //Allowed Roles to this user on each section
@@ -135,11 +144,30 @@ namespace UBERREP.BusinessLayer.Users
 
             if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='Type'").Length != 0 && dataReader["Type"] != DBNull.Value)
                 this.Type = (UserTypes)int.Parse(dataReader["Type"].ToString());
+
+            if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='Gender'").Length != 0 && dataReader["Gender"] != DBNull.Value)
+                this.Gender = dataReader["Gender"] != DBNull.Value ? (BusinessLayer.Users.Gender)(Convert.ToInt32(dataReader["Gender"].ToString())) : BusinessLayer.Users.Gender.Unknown;
+
+            if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='Remarks'").Length != 0 && dataReader["Remarks"] != DBNull.Value)
+                this.Remarks = dataReader["Remarks"].ToString();
+
+            if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='PaymentID'").Length != 0 && dataReader["PaymentID"] != DBNull.Value)
+            {
+                this.PaymentInfo = new Payment.PaymentInfo();
+                this.PaymentInfo.CreditCard = new Payment.CreditCard();
+                this.PaymentInfo.CreditCard.HolderName = dataReader["HolderName"] != DBNull.Value ? dataReader["HolderName"].ToString() : string.Empty;
+                this.PaymentInfo.CreditCard.BankName = dataReader["BankName"] != DBNull.Value ? dataReader["BankName"].ToString() : string.Empty;
+                this.PaymentInfo.CreditCard.CVV = dataReader["CVV"] != DBNull.Value ? dataReader["CVV"].ToString() : string.Empty;
+                this.PaymentInfo.CreditCard.ExpiryDate = dataReader["ExpireDate"] != DBNull.Value ? dataReader["ExpireDate"].ToString() : string.Empty;
+                this.PaymentInfo.CreditCard.Number = dataReader["CCNumber"] != DBNull.Value ? dataReader["CCNumber"].ToString() : string.Empty;
+                this.PaymentInfo.AutoPayment = dataReader["AutoPayment"] != DBNull.Value ? bool.Parse(dataReader["AutoPayment"].ToString()) : false;
+                this.PaymentInfo.EmailMonthly = dataReader["EmailMonthly"] != DBNull.Value ? bool.Parse(dataReader["EmailMonthly"].ToString()) : false;
+            }
         }
         internal override void Execute()
         {
             int currentUserID = UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null ? UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.ID : BusinessLayer.Users.User.DefaultSystemUserID;
-            this.Properties.sParameters = new System.Data.SqlClient.SqlParameter[10];
+            this.Properties.sParameters = new System.Data.SqlClient.SqlParameter[13];
 
             string password = IsPasswordEncrypted && !string.IsNullOrEmpty(this.Password) ? UBERREP.CommonLayer.Functions.Encrypt(this.Password, CommonLayer.Functions.EncryptionDataType.PasswordDataKey) : this.Password;
 
@@ -159,6 +187,11 @@ namespace UBERREP.BusinessLayer.Users
                 this.Properties.sParameters[7] = new System.Data.SqlClient.SqlParameter("@contactinfo", null);
             this.Properties.sParameters[8] = new System.Data.SqlClient.SqlParameter("@updatedby", currentUserID);
             this.Properties.sParameters[9] = new System.Data.SqlClient.SqlParameter("@type", this.Type);
+
+            this.Properties.sParameters[10] = new System.Data.SqlClient.SqlParameter("@remarks", this.Remarks);
+            this.Properties.sParameters[11] = new System.Data.SqlClient.SqlParameter("@gender", this.Gender);
+
+            this.Properties.sParameters[12] = new System.Data.SqlClient.SqlParameter("@points", this.Points);
 
             if (this.Mode != BusinessLayer.DbOperationMode.Select)
             {
@@ -192,15 +225,15 @@ namespace UBERREP.BusinessLayer.Users
                 case BusinessLayer.DbOperationMode.Delete:
                     {
                         User _userRemoved;
-                        if (Users.ContainsKey(this.ID)) Users.TryRemove(this.ID,out _userRemoved);
+                        if (Users.ContainsKey(this.ID)) Users.TryRemove(this.ID, out _userRemoved);
                         break;
                     }
                 default:
                     {
                         //lock (lockObj)
                         //{
-                            if (Users.ContainsKey(this.ID)) Users[this.ID] = this;
-                            else Users.TryAdd(this.ID, this);
+                        if (Users.ContainsKey(this.ID)) Users[this.ID] = this;
+                        else Users.TryAdd(this.ID, this);
                         //}
                         break;
                     }
@@ -215,6 +248,12 @@ namespace UBERREP.BusinessLayer.Users
         }
     }
 
+    public enum Gender
+    {
+        Unknown = 0,
+        Male = 1,
+        Female = 2
+    }
     public enum UserTypes
     {
         //System = 1,
