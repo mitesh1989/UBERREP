@@ -1,6 +1,10 @@
 ﻿using BusinessLayer.Common;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -62,6 +66,26 @@ namespace UBERREP.Controls
 
             this.Load += new System.EventHandler(this.Page_Load);
             this.UserListRPT.ItemCommand += UserListRPT_ItemCommand;
+            
+        }
+
+        protected void BTNSaveToPDF_Click(object sender, EventArgs e)
+        {
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("content-disposition", "attachment;filename=Customers.pdf");
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter hw = new HtmlTextWriter(sw);
+            this.UserListRPT.RenderControl(hw);
+            StringReader sr = new StringReader(sw.ToString().Replace("\r", "").Replace("\n", "").Replace("  ", ""));
+            Document pdfDoc = new Document(iTextSharp.text.PageSize.A4, 10f, 10f, 10f, 0.0f);
+            HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
+            PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+            pdfDoc.Open();
+            htmlparser.Parse(sr);
+            pdfDoc.Close();
+            Response.Write(pdfDoc);
+            Response.End();
         }
 
         private void UserListRPT_ItemCommand(object source, RepeaterCommandEventArgs e)

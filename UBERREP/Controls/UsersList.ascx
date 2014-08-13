@@ -10,24 +10,25 @@
 
     </script>
 
+    <div class="clearfix">
+        <div class="btn-group">
+            <%--<asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />--%>
+        </div>
+        <div class="btn-group pull-right">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                Tools <i class="icon-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="javascript :print_page();">Print</a></li>
+                <asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" />
+                <li><a href="#">Save as PDF</a></li>
+                <li><a href="#">Export to Excel</a></li>
+            </ul>
+        </div>
+    </div>
+
     <asp:Repeater ID="UserListRPT" runat="server">
         <HeaderTemplate>
-            <div class="clearfix">
-                <div class="btn-group">
-
-                    <asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />
-                </div>
-                <div class="btn-group pull-right">
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                        Tools <i class="icon-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" onclick="javascript :print_page();">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-            </div>
             <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
                 <thead>
                     <tr>
