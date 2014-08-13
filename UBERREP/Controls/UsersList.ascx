@@ -20,9 +20,8 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a href="#" onclick="javascript :print_page();">Print</a></li>
-                <asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" />
-                <li><a href="#">Save as PDF</a></li>
-                <li><a href="#">Export to Excel</a></li>
+                <li><asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" /></li>
+                <li><asp:LinkButton ID="BTNSaveToExcel" runat="server" Text="Export to Excel" OnClick="BTNSaveToExcel_Click"/></li>
             </ul>
         </div>
     </div>

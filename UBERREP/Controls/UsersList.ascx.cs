@@ -186,5 +186,18 @@ namespace UBERREP.Controls
         public void ShowMessage(string message) { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('"+message+"')", true); }
         #endregion
 
+        protected void BTNSaveToExcel_Click(object sender, EventArgs e)
+        {
+            string filename = "DownloadTest.xls";
+            System.IO.StringWriter tw = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);          
+            UserListRPT.RenderControl(hw);
+            Response.ContentType = "application/vnd.ms-excel";
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");
+            this.EnableViewState = false;
+            Response.Write(tw.ToString());
+            Response.End();
+        }
+
     }
 }
