@@ -10,11 +10,15 @@ namespace UBERREP
         protected void Page_Load(object sender, EventArgs e)
         {
             UserListUC.UserType = BusinessLayer.Users.UserTypes.Retailer;
-            NameValueCollection spData = new NameValueCollection();
-            spData.Add("usertype",Convert.ToString(UserListUC.UserType));
-            UserListUC.UserList = BusinessLayer.Users.UserManager.GetUsers(null);
-            if(!Page.IsPostBack)
-            UserListUC.BindData();
+
+            if (!Page.IsPostBack)
+            {
+                
+                NameValueCollection spData = new NameValueCollection();
+                spData.Add("usertype", Convert.ToString(UserListUC.UserType));
+                UserListUC.UserList = BusinessLayer.Users.UserManager.GetUsers(spData);
+                UserListUC.BindData();
+            }
         }
         [System.Web.Services.WebMethod]
         public static string ValidateLogin(string userName, string passWord)

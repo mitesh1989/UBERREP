@@ -260,7 +260,7 @@ namespace UBERREP.BusinessLayer.Users
         //Client = 2
         WholeSale_Admin = 1,  //Wholesale Admin
         Sales_Rep_Admin = 2,  //Sales Rep - Admin
-        Sales_Rep_Individual = 3,   //Sales Rep - Individual
+        Sales = 3,   //Sales Rep - Individual
         Retailer = 4  // Retailer
     }
     public class UserManager : Base.BaseManager
@@ -370,6 +370,7 @@ namespace UBERREP.BusinessLayer.Users
                 if (spData["name"] != null) spParams.Add(new SqlParameter("@name", spData["name"]));
                 if (spData["status"] != null) spParams.Add(new SqlParameter("@status", spData["status"]));
                 if (spData["email"] != null) spParams.Add(new SqlParameter("@email", spData["email"]));
+                if (spData["type"] != null) spParams.Add(new SqlParameter("@type", spData["type"]));
                 if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Type == UserTypes.Retailer && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0)
                 {
                     spParams.Add(new SqlParameter("@ClientID", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID.ToString()));

@@ -4,6 +4,7 @@ using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -42,6 +43,15 @@ namespace UBERREP.Controls
             }
             else { UserListRPT.Visible = false; }
         }
+        public void BindReapeater()
+        {
+           
+            NameValueCollection spData = new NameValueCollection();
+            spData.Add("usertype", Convert.ToString(userType));
+            UserListRPT.DataSource = BusinessLayer.Users.UserManager.GetUsers(spData);
+            UserListRPT.DataBind();
+            //this.BindData();
+        }
         #region Web Form Designer generated code
         override protected void OnInit(EventArgs e)
         {
@@ -67,7 +77,7 @@ namespace UBERREP.Controls
 
             this.Load += new System.EventHandler(this.Page_Load);
             this.UserListRPT.ItemCommand += UserListRPT_ItemCommand;
-            
+
         }
 
         protected void BTNSaveToPDF_Click(object sender, EventArgs e)
@@ -95,7 +105,7 @@ namespace UBERREP.Controls
 
         private void UserListRPT_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-           
+
             switch (e.CommandName)
             {
                 case "Delete":
@@ -151,46 +161,56 @@ namespace UBERREP.Controls
                     }
                 case "Update":
                     {
-                        BusinessLayer.Users.User obj = new BusinessLayer.Users.User();
+                        BusinessLayer.Users.User obj = new BusinessLayer.Users.User();//((List<BusinessLayer.Users.User>)((Repeater)source).DataSource)[e.Item.ItemIndex];
                         obj.ID = Convert.ToInt16(e.CommandArgument);
-                        obj.Type = BusinessLayer.Users.UserTypes.Retailer;
+                        obj.Type = userType;
+                        obj.Password = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_pass"))).Text;
+                        obj.Email = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text == string.Empty ? "NAN" : ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text;
                         obj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
                         obj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_FullName"))).Text;
                         //obj.RecordNumber = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Point"))).Text;
                         //obj.Type = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Notes"))).Text;
+
+                        obj.Remarks = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Notes"))).Text;
+                        obj.Points = Convert.ToDecimal(((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Point"))).Text);
+
                         BusinessLayer.Users.UserManager.Update(obj);
-                        this.BindData();
+                        this.BindReapeater();
                         ShowMessage("Record Updated Successfully");
                         break;
                     }
                 case "Save":
                     {
                         BusinessLayer.Users.User retObj = new BusinessLayer.Users.User();
-                    //  retObj.Email = retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
-                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text; 
-                        retObj.Password="123456";
+                        //  retObj.Email = retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
+                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text;
+                        retObj.Password = "123456";
                         retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
                         retObj.Type = userType;
                         retObj.Status = Status.Active;
+                        retObj.Remarks = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Notes"))).Text;
+                        retObj.Points = Convert.ToDecimal(((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Points"))).Text);
+
+                        BusinessLayer.Users.UserManager.Create(retObj);
                         this.BindData();
                         ShowMessage("Record Inserted Successfully");
                         break;
                     }
             }
- 
+
         }
         #endregion
 
 
         #region AlertMessage
-        public void ShowMessage(string message) { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('"+message+"')", true); }
+        public void ShowMessage(string message) { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + message + "')", true); }
         #endregion
 
         protected void BTNSaveToExcel_Click(object sender, EventArgs e)
         {
             string filename = "DownloadTest.xls";
             System.IO.StringWriter tw = new System.IO.StringWriter();
-            System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);          
+            System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter(tw);
             UserListRPT.RenderControl(hw);
             Response.ContentType = "application/vnd.ms-excel";
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + "");

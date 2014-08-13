@@ -10,30 +10,31 @@
 
     </script>
 
-    <div class="clearfix">
-        <div class="btn-group">
-            <asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />
-        </div>
-        <div class="btn-group pull-right">
-            <button class="btn dropdown-toggle" data-toggle="dropdown">
-                Tools <i class="icon-angle-down"></i>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#" onclick="javascript :print_page();">Print</a></li>
-                <li>
-                    <asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" /></li>
-                <li>
-                    <asp:LinkButton ID="BTNSaveToExcel" runat="server" Text="Export to Excel" OnClick="BTNSaveToExcel_Click" /></li>
-            </ul>
-        </div>
-    </div>
+
 
     <asp:Repeater ID="UserListRPT" runat="server">
         <HeaderTemplate>
+            <div class="clearfix">
+                <div class="btn-group">
+                    <asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />
+                </div>
+                <div class="btn-group pull-right">
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        Tools <i class="icon-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="javascript :print_page();">Print</a></li>
+                        <li>
+                            <asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" /></li>
+                        <li>
+                            <asp:LinkButton ID="BTNSaveToExcel" runat="server" Text="Export to Excel" OnClick="BTNSaveToExcel_Click" /></li>
+                    </ul>
+                </div>
+            </div>
             <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
                 <thead>
                     <tr>
-                        <th>Username</th>
+                        <th style="width: 20% !IMPORTANT">Username</th>
                         <th>Full Name</th>
                         <th>Points</th>
                         <th>Notes</th>
@@ -45,20 +46,20 @@
                     <tr class="">
                         <td>
 
-                            <asp:TextBox ID="txt_ins_Username" runat="server" />
+                            <asp:TextBox ID="txt_ins_Username" class="m-wrap small" runat="server" />
 
                         </td>
                         <td>
 
-                            <asp:TextBox ID="txt_ins_Fullname" runat="server" />
+                            <asp:TextBox ID="txt_ins_Fullname" class="m-wrap small" runat="server" />
                         </td>
                         <td>
 
-                            <asp:TextBox ID="txt_ins_Points" runat="server" />
+                            <asp:TextBox ID="txt_ins_Points" class="m-wrap small" runat="server" />
                         </td>
                         <td>
 
-                            <asp:TextBox ID="txt_ins_Notes" runat="server" />
+                            <asp:TextBox ID="txt_ins_Notes" class="m-wrap small" runat="server" />
                         </td>
                         <td>
                             <asp:LinkButton ID="LinkButton1" runat="server" Text="Save" CommandName="Save" />
@@ -77,21 +78,26 @@
 
             <tr class="">
                 <td>
+
+
+
+                    <asp:Label ID="lbl_pass" Visible="false" runat="server" Text="<%#(((UBERREP.BusinessLayer.Users.User)Container.DataItem).Password).ToString() %>"></asp:Label>
+                    <asp:Label ID="lbl_Email" Visible="false" runat="server" Text="<%#(((UBERREP.BusinessLayer.Users.User)Container.DataItem).Email).ToString() %>"></asp:Label>
                     <asp:Literal ID="Lit_usename" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' />
-                    <asp:TextBox ID="TXT_username" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
+                    <asp:TextBox ID="TXT_username" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
 
                 </td>
                 <td>
                     <asp:Literal ID="lit_FullName" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' />
-                    <asp:TextBox ID="txt_FullName" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' Visible="false" />
+                    <asp:TextBox ID="txt_FullName" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' Visible="false" />
                 </td>
                 <td>
                     <asp:Literal ID="lit_Point" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' />
-                    <asp:TextBox ID="txt_Point" Columns="4" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' Visible="false" />
+                    <asp:TextBox ID="txt_Point" class="m-wrap small" Columns="4" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' Visible="false" />
                 </td>
                 <td>
                     <asp:Literal ID="lit_Notes" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' />
-                    <asp:TextBox ID="txt_Notes" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' Visible="false" />
+                    <asp:TextBox ID="txt_Notes" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' Visible="false" />
                 </td>
                 <td>
                     <asp:LinkButton ID="lnk_Edit" runat="server" Text="Edit" CommandName="Edit" />
