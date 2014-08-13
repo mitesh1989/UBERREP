@@ -34,10 +34,10 @@
             <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
                 <thead>
                     <tr>
-                        <th style="width: 20% !IMPORTANT">Username</th>
-                        <th>Full Name</th>
-                        <th>Points</th>
-                        <th>Notes</th>
+                        <th>Username</th>
+                        <th style="width: 20% !IMPORTANT">Full Name</th>
+                        <th style="width: 20% !IMPORTANT">Points</th>
+                        <th style="width: 20% !IMPORTANT">Notes</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -45,31 +45,23 @@
                 <asp:Panel ID="insertPnl" runat="server" Visible="false">
                     <tr class="">
                         <td>
-
-                            <asp:TextBox ID="txt_ins_Username" class="m-wrap small" runat="server" />
-
+                            <asp:TextBox ID="txt_ins_Username" class="m-wrap small fixBig" runat="server" />
                         </td>
                         <td>
-
-                            <asp:TextBox ID="txt_ins_Fullname" class="m-wrap small" runat="server" />
+                            <asp:TextBox ID="txt_ins_Fullname" class="m-wrap small fixSmall" runat="server" />
                         </td>
                         <td>
-
-                            <asp:TextBox ID="txt_ins_Points" class="m-wrap small" runat="server" />
+                            <asp:TextBox ID="txt_ins_Points" class="m-wrap small fixSmall" runat="server" />
                         </td>
                         <td>
-
-                            <asp:TextBox ID="txt_ins_Notes" class="m-wrap small" runat="server" />
+                            <asp:TextBox ID="txt_ins_Notes" class="m-wrap small fixSmall" runat="server" />
                         </td>
                         <td>
                             <asp:LinkButton ID="LinkButton1" runat="server" Text="Save" CommandName="Save" />
-
-
                         </td>
                         <td>
                             <asp:LinkButton ID="LinkButton2" runat="server" Text="Cancel" CommandName="InsertCancel" />
                         </td>
-
                     </tr>
                 </asp:Panel>
         </HeaderTemplate>
@@ -77,27 +69,24 @@
         <ItemTemplate>
 
             <tr class="">
-                <td>
-
-
-
+                <td style="width: 160px;">
                     <asp:Label ID="lbl_pass" Visible="false" runat="server" Text="<%#(((UBERREP.BusinessLayer.Users.User)Container.DataItem).Password).ToString() %>"></asp:Label>
                     <asp:Label ID="lbl_Email" Visible="false" runat="server" Text="<%#(((UBERREP.BusinessLayer.Users.User)Container.DataItem).Email).ToString() %>"></asp:Label>
                     <asp:Literal ID="Lit_usename" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' />
-                    <asp:TextBox ID="TXT_username" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
+                    <asp:TextBox ID="TXT_username" class="m-wrap small fixBig" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
 
                 </td>
                 <td>
                     <asp:Literal ID="lit_FullName" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' />
-                    <asp:TextBox ID="txt_FullName" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' Visible="false" />
+                    <asp:TextBox ID="txt_FullName" class="m-wrap small fixSmall" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Name%>' Visible="false" />
                 </td>
                 <td>
                     <asp:Literal ID="lit_Point" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' />
-                    <asp:TextBox ID="txt_Point" class="m-wrap small" Columns="4" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' Visible="false" />
+                    <asp:TextBox ID="txt_Point" class="m-wrap small fixSmall" Columns="4" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).RecordNumber%>' Visible="false" />
                 </td>
                 <td>
                     <asp:Literal ID="lit_Notes" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' />
-                    <asp:TextBox ID="txt_Notes" class="m-wrap small" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' Visible="false" />
+                    <asp:TextBox ID="txt_Notes" class="m-wrap small fixSmall" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Type%>' Visible="false" />
                 </td>
                 <td>
                     <asp:LinkButton ID="lnk_Edit" runat="server" Text="Edit" CommandName="Edit" />

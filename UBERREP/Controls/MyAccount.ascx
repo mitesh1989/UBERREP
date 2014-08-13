@@ -39,8 +39,7 @@
                                                         <span class="number">4</span>
                                                         <span class="desc"><i class="icon-ok"></i>Confirm</span>
                                                     </a>
-                                                </li>
-                                                t
+                                                </li>                                                
                                             </ul>
                                         </div>
                                     </div>

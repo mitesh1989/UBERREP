@@ -128,7 +128,7 @@
                         class="title">Dashboard</span> <span class="selected"></span></a></li>
                     <li class="has-sub "><a href="../UploadInventory.aspx"><i class="icon-bookmark-empty"></i><span class="title">Upload Inventory</span> <span class=""></span></a></li>
                     <li class="has-sub "><a href="../Sales.aspx"><i class="icon-table"></i><span class="title">Add Sales</span> <span class=""></span></a></li>
-                    <li class="has-sub "><a href="../Retailers.aspx"><i class="icon-th-list"></i><span
+                    <li class="has-sub "><a href="../Retailer.aspx"><i class="icon-th-list"></i><span
                         class="title">Add Retailers</span> <span class=""></span></a></li>
                 </ul>
                 <!-- END SIDEBAR MENU -->

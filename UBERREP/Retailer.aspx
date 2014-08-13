@@ -50,7 +50,7 @@
                         <i class="icon-angle-right"></i>
                     </li>
 
-                    <li><a href="Add Retailers.html">Add Retailers</a></li>
+                    <li><a href="Retailer.aspx">Add Retailers</a></li>
                 </ul>
                 <!-- END PAGE TITLE & BREADCRUMB-->
             </div>

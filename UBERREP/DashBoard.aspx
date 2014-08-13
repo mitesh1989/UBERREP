@@ -6,6 +6,23 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .m-wrap.fixBig
+        {
+            width: 135px !important;
+        }
+
+        .m-wrap.fixSmall
+        {
+            width: 40px !important;
+        }
+
+        input[type="text"].m-wrap
+        {
+            margin-bottom: 0px !important;
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -91,8 +108,14 @@
                                 <a href="javascript:;" class="reload"></a>
                             </div>
                         </div>
+
+                        <div class="portlet-body">
+
+                            <uc1:UsersList runat="server" ID="UsersListSales" />
+                        </div>
+
                         <!-- END EXAMPLE TABLE PORTLET-->
-                        <uc1:UsersList runat="server" ID="UsersListSales" />
+
                         <div class="portlet box blue">
                             <div class="portlet-title">
                                 <h4><i class="icon-edit"></i>Retailer</h4>
@@ -102,7 +125,11 @@
                                     <a href="javascript:;" class="reload"></a>
                                 </div>
                             </div>
-                            <uc1:UsersList runat="server" ID="UsersListRetailer" />
+                            <div class="portlet-body">
+
+                                <uc1:UsersList runat="server" ID="UsersListRetailer" />
+                            </div>
+
                         </div>
                     </div>
                 </div>
