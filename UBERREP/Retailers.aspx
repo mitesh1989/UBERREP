@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Dashboard.Master" AutoEventWireup="true" CodeBehind="Retailers.aspx.cs" Inherits="UBERREP.Retailers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Dashboard.Master" AutoEventWireup="true" CodeBehind="Retailers.aspx.cs" Inherits="UBERREP.Retailers" EnableEventValidation="false" %>
 
 <%@ Register Src="~/Controls/UsersList.ascx" TagName="UsersList"
     TagPrefix="uc1" %>
