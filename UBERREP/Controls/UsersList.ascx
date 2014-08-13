@@ -12,7 +12,7 @@
 
     <div class="clearfix">
         <div class="btn-group">
-            <%--<asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />--%>
+            <asp:Button ID="sample_editable_1_new" runat="server" class="btn red" CommandName="Insert" Text="Add New" />
         </div>
         <div class="btn-group pull-right">
             <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -20,8 +20,10 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a href="#" onclick="javascript :print_page();">Print</a></li>
-                <li><asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" /></li>
-                <li><asp:LinkButton ID="BTNSaveToExcel" runat="server" Text="Export to Excel" OnClick="BTNSaveToExcel_Click"/></li>
+                <li>
+                    <asp:LinkButton ID="BTNSaveToPDF" runat="server" Text="Save as PDF" OnClick="BTNSaveToPDF_Click" /></li>
+                <li>
+                    <asp:LinkButton ID="BTNSaveToExcel" runat="server" Text="Export to Excel" OnClick="BTNSaveToExcel_Click" /></li>
             </ul>
         </div>
     </div>

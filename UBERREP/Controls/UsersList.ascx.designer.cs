@@ -13,6 +13,15 @@ namespace UBERREP.Controls {
     public partial class UsersList {
         
         /// <summary>
+        /// sample_editable_1_new control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button sample_editable_1_new;
+        
+        /// <summary>
         /// BTNSaveToPDF control.
         /// </summary>
         /// <remarks>
