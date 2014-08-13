@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Home.Master" AutoEventWireup="true" CodeBehind="TestPage.aspx.cs" %>
 
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="uc1" TagName="Login" %>
+<%@ Register Src="~/Controls/UsersList.ascx" TagPrefix="uc1" TagName="UsersList" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -32,4 +34,8 @@
     <asp:TextBox AutoCompleteType="FirstName" TabIndex="1" ID="TXTUserName" runat="server" MaxLength="50" PlaceHolder="Your Name" CssClass="text-name"></asp:TextBox>
     <input id="btnGetTime" type="button" value="Show Current Time"
         onclick="ShowCurrentTime()" />
+
+
+    <uc1:UsersList runat="server" id="UsersListUC" />
+
 </asp:Content>

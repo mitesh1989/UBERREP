@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -77,9 +78,20 @@ namespace UBERREP.Controls
                         ShowMessage("Record Deleted Successfully");
                         break;
                     }
+                case "Insert":
+                    {
+                        e.Item.FindControl("insertPnl").Visible = true;
+                        break;
+                    }
+                case "InsertCancel":
+                    {
+                        e.Item.FindControl("insertPnl").Visible = false;
+                        break;
+                    }
                 case "Edit":
                     {
                         e.Item.FindControl("lnk_Update").Visible = true;
+                        e.Item.FindControl("lnk_delete").Visible = false;
                         e.Item.FindControl("lnk_Cancel").Visible = true;
                         e.Item.FindControl("lnk_Edit").Visible = false;
                         e.Item.FindControl("Lit_usename").Visible = false;
@@ -95,6 +107,7 @@ namespace UBERREP.Controls
                 case "Cancel":
                     {
                         e.Item.FindControl("lnk_Update").Visible = false;
+                        e.Item.FindControl("lnk_delete").Visible = true;
                         e.Item.FindControl("lnk_Cancel").Visible = false;
                         e.Item.FindControl("lnk_Edit").Visible = true;
                         e.Item.FindControl("Lit_usename").Visible = true;
@@ -119,6 +132,19 @@ namespace UBERREP.Controls
                         BusinessLayer.Users.UserManager.Update(obj);
                         this.BindData();
                         ShowMessage("Record Updated Successfully");
+                        break;
+                    }
+                case "Save":
+                    {
+                        BusinessLayer.Users.User retObj = new BusinessLayer.Users.User();
+                    //  retObj.Email = retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
+                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text; 
+                        retObj.Password="123456";
+                        retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
+                        retObj.Type = userType;
+                        retObj.Status = Status.Active;
+                        this.BindData();
+                        ShowMessage("Record Inserted Successfully");
                         break;
                     }
             }

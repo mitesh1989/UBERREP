@@ -9,16 +9,7 @@
 
 
 
-public partial class  TestPage{
-    
-    /// <summary>
-    /// Login control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::UBERREP.Controls.Login Login;
+public partial class  testpage {
     
     /// <summary>
     /// TXTUserName control.
@@ -28,4 +19,13 @@ public partial class  TestPage{
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox TXTUserName;
+    
+    /// <summary>
+    /// UsersListUC control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::UBERREP.Controls.UsersList UsersListUC;
 }
