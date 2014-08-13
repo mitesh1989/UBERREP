@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace UBERREP.Controls
@@ -71,14 +72,17 @@ namespace UBERREP.Controls
 
         protected void BTNSaveToPDF_Click(object sender, EventArgs e)
         {
-            Response.ContentType = "application/pdf";
-            Response.AddHeader("content-disposition", "attachment;filename=Customers.pdf");
+            Response.AddHeader("content-disposition", "attachment;filename=Export.pdf");
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             StringWriter sw = new StringWriter();
             HtmlTextWriter hw = new HtmlTextWriter(sw);
-            this.UserListRPT.RenderControl(hw);
-            StringReader sr = new StringReader(sw.ToString().Replace("\r", "").Replace("\n", "").Replace("  ", ""));
-            Document pdfDoc = new Document(iTextSharp.text.PageSize.A4, 10f, 10f, 10f, 0.0f);
+            HtmlForm frm = new HtmlForm();
+            UserListRPT.Parent.Controls.Add(frm);
+            frm.Attributes["runat"] = "server";
+            frm.Controls.Add(UserListRPT);
+            frm.RenderControl(hw);
+            StringReader sr = new StringReader(sw.ToString());
+            Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
             HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
             PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
             pdfDoc.Open();
@@ -87,6 +91,7 @@ namespace UBERREP.Controls
             Response.Write(pdfDoc);
             Response.End();
         }
+
 
         private void UserListRPT_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
