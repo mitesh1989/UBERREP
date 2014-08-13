@@ -4,7 +4,7 @@
 
 <script type="text/javascript">
     function ValidateLogin() {
-        
+        $("#loading").text("Loading....");
         $.ajax({
             type: "POST",
             url: "AjaxCall.aspx/ValidateLogin",
@@ -14,6 +14,7 @@
             success: OnSuccess,
             failure: OnFail
         });
+        $("#loading").text("");
     }
     function OnFail(response) {
         alert(response.d);
@@ -27,6 +28,7 @@
             $("#lblmsg").text(response.d);
     }
 </script>
+<label id="loading" style="color:red;font-size:12px" ></label>
 <asp:TextBox AutoCompleteType="FirstName" TabIndex="1" ID="txtUserName" runat="server" MaxLength="50" PlaceHolder="Your Name" CssClass="text-name"></asp:TextBox>
 
 <asp:TextBox AutoCompleteType="Disabled" TabIndex="2" TextMode="Password" ID="txtPassword" runat="server" MaxLength="50" PlaceHolder="Your Password" CssClass="text-name"></asp:TextBox>
