@@ -1015,7 +1015,6 @@
     <Content Include="obj\Debug\UBERREP.pdb" />
     <Content Include="obj\Release\UBERREP.csproj.FileListAbsolute.txt" />
     <Content Include="Product.aspx" />
-    <Content Include="Retailers.aspx" />
     <Content Include="Sales.aspx" />
     <Content Include="SampleFiles\About Us.html" />
     <Content Include="SampleFiles\contact.html" />
@@ -1323,13 +1322,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Retailers.aspx.cs">
-      <DependentUpon>Retailers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Retailers.aspx.designer.cs">
-      <DependentUpon>Retailers.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Sales.aspx.cs">
       <DependentUpon>Sales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
