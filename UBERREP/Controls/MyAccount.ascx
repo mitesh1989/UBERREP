@@ -172,11 +172,11 @@
                                                 <label class="control-label">Payment Options</label>
                                                 <div class="controls">
                                                     <label class="checkbox line">
-                                                        <input type="checkbox" value="" />
+                                                        <asp:CheckBox ID="CHKAutoPay" runat="server" type="checkbox" value="" />
                                                         Auto-Pay with this Credit Card
                                                     </label>
                                                     <label class="checkbox line">
-                                                        <input type="checkbox" value="" />
+                                                        <asp:CheckBox ID="CHKEmail" runat="server" type="checkbox" value="" />
                                                         Email me monthly billing
                                                     </label>
                                                 </div>
@@ -223,12 +223,13 @@
                                         <a href="javascript:;" class="btn button-previous">
                                             <i class="m-icon-swapleft"></i>Back 
                                         </a>
+                                        
                                         <a href="javascript:;" class="btn black button-next">Continue <i class="m-icon-swapright m-icon-white"></i>
                                         </a>
                                         <i class="m-icon-swapright m-icon-white"></i>
-
+                                        <asp:Button runat="server" ID="BTNSubmit" OnClick="BTNSubmit_Click" CssClass="btn red button-submit" Text="Submit" />
                                     </div>
-                                    <asp:Button runat="server" ID="BTNSubmit" OnClick="BTNSubmit_Click" CssClass="btn red button-submit" Text="Submit" />
+                                    
                                 </div>
                             
                         </div>

@@ -22,6 +22,8 @@ namespace UBERREP.BusinessLayer.Users
         [System.Xml.Serialization.XmlAttribute]
         public UserTypes Type;
 
+        public int PaymentID;
+
         public decimal Points;
 
 
@@ -29,7 +31,22 @@ namespace UBERREP.BusinessLayer.Users
 
         public string Remarks;
 
-        public BusinessLayer.Payment.PaymentInfo PaymentInfo;
+        private Payment.PaymentInfo _paymentInfo;
+        public BusinessLayer.Payment.PaymentInfo PaymentInfo
+        {
+            get;
+                //if (this._paymentInfo==null)
+                //{
+                //    _paymentInfo = BusinessLayer.Payment.PaymentInfo.Get(this.PaymentID);
+                //    return _paymentInfo;
+                //}
+                //return _paymentInfo;
+            //}
+            set;
+            //{
+                //this._paymentInfo = value;
+            //}            
+        }
 
         //public static object lockObj = new object();//to prevent dictionary from being modified by more than one object at the same time - by obtaining lock on that object
 
@@ -151,11 +168,15 @@ namespace UBERREP.BusinessLayer.Users
             if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='Remarks'").Length != 0 && dataReader["Remarks"] != DBNull.Value)
                 this.Remarks = dataReader["Remarks"].ToString();
 
-            if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='PaymentID'").Length != 0 && dataReader["PaymentID"] != DBNull.Value)
+            
+
+            if (dataReader.GetSchemaTable().Rows[0].Table.Select("ColumnName='PaymentId'").Length != 0 && dataReader["PaymentId"] != DBNull.Value)
             {
+                
                 this.PaymentInfo = new Payment.PaymentInfo();
+                this.PaymentID = this.PaymentInfo.ID = dataReader["PaymentId"] != DBNull.Value ? int.Parse(dataReader["PaymentId"].ToString()) : 0;
                 this.PaymentInfo.CreditCard = new Payment.CreditCard();
-                this.PaymentInfo.CreditCard.HolderName = dataReader["HolderName"] != DBNull.Value ? dataReader["HolderName"].ToString() : string.Empty;
+                this.PaymentInfo.CreditCard.HolderName = dataReader["CardHolderName"] != DBNull.Value ? dataReader["CardHolderName"].ToString() : string.Empty;
                 this.PaymentInfo.CreditCard.BankName = dataReader["BankName"] != DBNull.Value ? dataReader["BankName"].ToString() : string.Empty;
                 this.PaymentInfo.CreditCard.CVV = dataReader["CVV"] != DBNull.Value ? dataReader["CVV"].ToString() : string.Empty;
                 this.PaymentInfo.CreditCard.ExpiryDate = dataReader["ExpireDate"] != DBNull.Value ? dataReader["ExpireDate"].ToString() : string.Empty;
@@ -172,7 +193,7 @@ namespace UBERREP.BusinessLayer.Users
             string password = IsPasswordEncrypted && !string.IsNullOrEmpty(this.Password) ? UBERREP.CommonLayer.Functions.Encrypt(this.Password, CommonLayer.Functions.EncryptionDataType.PasswordDataKey) : this.Password;
 
             this.Properties.sParameters[0] = new System.Data.SqlClient.SqlParameter("@mode", this.Mode);
-            this.Properties.sParameters[1] = new System.Data.SqlClient.SqlParameter("@id", this.ID);
+            this.Properties.sParameters[1] = new System.Data.SqlClient.SqlParameter("@id", currentUserID);
             this.Properties.sParameters[2] = new System.Data.SqlClient.SqlParameter("@name", this.Name);
             this.Properties.sParameters[3] = new System.Data.SqlClient.SqlParameter("@username", this.Username);
             this.Properties.sParameters[4] = new System.Data.SqlClient.SqlParameter("@password", password);

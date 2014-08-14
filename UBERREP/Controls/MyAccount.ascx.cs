@@ -33,7 +33,7 @@ namespace UBERREP.Controls
             obj.ContactData.Address.LineOne = TXTAddress.Text;
             obj.ContactData.Address.City = new global::BusinessLayer.Common.Location();
             obj.ContactData.Address.City.Name = TXTCity.Text;
-            obj.ContactData.Email = TXTEmail.Text;
+            obj.Email = obj.ContactData.Email = TXTEmail.Text;
             obj.ContactData.ClientPhone = TXTPhone.Text;
             obj.Remarks = TXTRemarks.Text;
             if (RDOMale.Checked)
@@ -41,15 +41,22 @@ namespace UBERREP.Controls
             else
                 obj.Gender = BusinessLayer.Users.Gender.Female;
 
+            obj.PaymentID = BusinessLayer.Common.CurrentContext.CurrentUser.PaymentID;
+
             BusinessLayer.Users.UserManager.Update(obj);
 
+            
             obj.PaymentInfo = new BusinessLayer.Payment.PaymentInfo();
+            //obj.PaymentInfo.ID = BusinessLayer.Common.CurrentContext.CurrentUser.PaymentInfo.ID;
             obj.PaymentInfo.CreditCard = new BusinessLayer.Payment.CreditCard();
             obj.PaymentInfo.CreditCard.BankName = TXTBankName.Text;
             obj.PaymentInfo.CreditCard.CVV = TXTCVC.Text;
             obj.PaymentInfo.CreditCard.ExpiryDate = TXTMonth.Text + TXTYear.Text;
             obj.PaymentInfo.CreditCard.HolderName = TXTHolderName.Text;
             obj.PaymentInfo.CreditCard.Number = TXTCCNumber.Text;
+
+            obj.PaymentInfo.AutoPayment = CHKAutoPay.Checked;
+            obj.PaymentInfo.EmailMonthly = CHKAutoPay.Checked;
 
             BusinessLayer.Payment.PaymentInfo.ManagePayment(obj, BusinessLayer.DbOperationMode.Update);
 
@@ -83,8 +90,10 @@ namespace UBERREP.Controls
                     TXTCCNumber.Text = obj.PaymentInfo.CreditCard.Number;
                     TXTCVC.Text = obj.PaymentInfo.CreditCard.CVV;
                     TXTHolderName.Text = obj.PaymentInfo.CreditCard.HolderName;
-                    TXTMonth.Text = obj.PaymentInfo.CreditCard.ExpiryDate.Substring(0, 2);
-                    TXTYear.Text = obj.PaymentInfo.CreditCard.ExpiryDate.Substring(2, 4);
+
+                    
+                    TXTMonth.Text = !string.IsNullOrEmpty(obj.PaymentInfo.CreditCard.ExpiryDate) ? obj.PaymentInfo.CreditCard.ExpiryDate.Substring(0, 2) : string.Empty;
+                    TXTYear.Text = !string.IsNullOrEmpty(obj.PaymentInfo.CreditCard.ExpiryDate) ? obj.PaymentInfo.CreditCard.ExpiryDate.Substring(2, 4) : string.Empty;
                 }
 
             }

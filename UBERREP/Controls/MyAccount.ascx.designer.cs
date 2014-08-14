@@ -166,6 +166,24 @@ namespace UBERREP.Controls {
         protected global::System.Web.UI.WebControls.TextBox TXTYear;
         
         /// <summary>
+        /// CHKAutoPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CHKAutoPay;
+        
+        /// <summary>
+        /// CHKEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CHKEmail;
+        
+        /// <summary>
         /// BTNSubmit control.
         /// </summary>
         /// <remarks>
