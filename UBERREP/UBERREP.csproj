@@ -908,6 +908,7 @@
     <Content Include="assets\uniform\jquery.uniform.min.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\MyAccount.ascx" />
     <Content Include="Controls\SignUp.ascx" />
     <Content Include="Controls\UsersList.ascx" />
     <Content Include="css\bootstrap-override.css" />
@@ -930,6 +931,7 @@
     <Content Include="css\tinycarousel.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Data\Patterns.xml" />
+    <Content Include="dBoard.aspx" />
     <Content Include="images\blog5.jpg" />
     <Content Include="images\blog6.jpg" />
     <Content Include="images\bootstrap-override.css" />
@@ -1247,6 +1249,13 @@
     <Compile Include="Controls\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MyAccount.ascx.cs">
+      <DependentUpon>MyAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MyAccount.ascx.designer.cs">
+      <DependentUpon>MyAccount.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SignUp.ascx.cs">
       <DependentUpon>SignUp.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1267,6 +1276,13 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dBoard.aspx.cs">
+      <DependentUpon>dBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dBoard.aspx.designer.cs">
+      <DependentUpon>dBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

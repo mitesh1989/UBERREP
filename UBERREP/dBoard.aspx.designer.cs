@@ -10,7 +10,7 @@
 namespace UBERREP {
     
     
-    public partial class Dashboard {
+    public partial class dBoard {
         
         /// <summary>
         /// MyAccount control.

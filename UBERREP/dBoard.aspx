@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Dashboard.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="UBERREP.Dashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/masterPages/Dashboard.Master" CodeBehind="dBoard.aspx.cs" Inherits="UBERREP.dBoard" %>
 
 <%@ Register Src="~/Controls/UsersList.ascx" TagPrefix="uc1" TagName="UsersList" %>
 <%@ Register Src="~/Controls/MyAccount.ascx" TagPrefix="uc1" TagName="MyAccount" %>
@@ -484,6 +484,6 @@
         <!-- END PAGE CONTAINER-->
 
 
-        <h3><%if (UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null)
-              {%>Hi, <%=UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.Name %><%} %></h3>
+       
 </asp:Content>
+

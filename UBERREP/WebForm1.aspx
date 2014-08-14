@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="uc1" TagName="Login" %>
 <%@ Register Src="~/Controls/UsersList.ascx" TagPrefix="uc1" TagName="UsersList" %>
+<%@ Register Src="~/Controls/MyAccount.ascx" TagPrefix="uc1" TagName="MyAccount" %>
+
 
 
 
@@ -17,7 +19,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-     
+        <uc1:MyAccount runat="server" id="MyAccount" />
         <uc1:UsersList runat="server" ID="UserListUC" />
     </div>
     </form>
