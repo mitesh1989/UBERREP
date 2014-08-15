@@ -59,14 +59,14 @@
                                             <div class="control-group">
                                                 <label class="control-label">Password</label>
                                                 <div class="controls">
-                                                    <asp:TextBox TextMode="Password" ID="TXTPassword" runat="server" class="span6 m-wrap"></asp:TextBox>
+                                                    <asp:TextBox  ID="TXTPassword" runat="server" class="span6 m-wrap"></asp:TextBox>
                                                     <span class="help-inline">Provide your username</span>
                                                 </div>
                                             </div>
                                             <div class="control-group">
                                                 <label class="control-label">Confirm Password</label>
                                                 <div class="controls">
-                                                    <asp:TextBox TextMode="Password" ID="TXTConfirmPassword" runat="server" class="span6 m-wrap" />
+                                                    <asp:TextBox ID="TXTConfirmPassword" runat="server" class="span6 m-wrap" />
                                                     <span class="help-inline">Confirm your password</span>
                                                 </div>
                                             </div>
@@ -219,11 +219,11 @@
                                         </div>
                                     </div>
                                     <div class="form-actions clearfix">
-                                        <a href="javascript:;" class="btn button-previous">
+                                        <a href="#tab1"data-toggle="tab" class="btn button-previous">
                                             <i class="m-icon-swapleft"></i>Back 
                                         </a>
                                         
-                                        <a href="javascript:;" class="btn black button-next">Continue <i class="m-icon-swapright m-icon-white"></i>
+                                        <a href="#tab2"data-toggle="tab" class="btn black button-next">Continue <i class="m-icon-swapright m-icon-white"></i>
                                         </a>
                                         <i class="m-icon-swapright m-icon-white"></i>
                                         <asp:Button runat="server" ID="BTNSubmit" OnClick="BTNSubmit_Click" CssClass="btn red button-submit" Text="Submit" />

@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/masterPages/Dashboard.Master" AutoEventWireup="true" CodeBehind="Retailer.aspx.cs" Inherits="UBERREP.Retailer" %>
 
-<%@ Register Src="~/Controls/UsersList.ascx" TagName="UsersList"
-    TagPrefix="uc1" %>
+   
+<%@ Register Src="~/Controls/RetailerList.ascx" TagPrefix="uc1" TagName="RetailerList" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -69,7 +70,7 @@
                             <a href="javascript:;" class="remove"></a>
                         </div>
                     </div>
-                    <uc1:UsersList ID="UsersList1" runat="server" />                    
+                    <uc1:RetailerList runat="server" id="RetailerList" />
                 </div>
                 <!-- END EXAMPLE TABLE PORTLET-->
             </div>

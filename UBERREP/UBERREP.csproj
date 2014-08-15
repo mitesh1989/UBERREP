@@ -909,8 +909,9 @@
     <Content Include="Contact.aspx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\MyAccount.ascx" />
+    <Content Include="Controls\SalesList.ascx" />
     <Content Include="Controls\SignUp.ascx" />
-    <Content Include="Controls\UsersList.ascx" />
+    <Content Include="Controls\RetailerList.ascx" />
     <Content Include="css\bootstrap-override.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -1256,6 +1257,13 @@
     <Compile Include="Controls\MyAccount.ascx.designer.cs">
       <DependentUpon>MyAccount.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SalesList.ascx.cs">
+      <DependentUpon>SalesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SalesList.ascx.designer.cs">
+      <DependentUpon>SalesList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SignUp.ascx.cs">
       <DependentUpon>SignUp.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1263,12 +1271,12 @@
     <Compile Include="Controls\SignUp.ascx.designer.cs">
       <DependentUpon>SignUp.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UsersList.ascx.cs">
-      <DependentUpon>UsersList.ascx</DependentUpon>
+    <Compile Include="Controls\RetailerList.ascx.cs">
+      <DependentUpon>RetailerList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\UsersList.ascx.designer.cs">
-      <DependentUpon>UsersList.ascx</DependentUpon>
+    <Compile Include="Controls\RetailerList.ascx.designer.cs">
+      <DependentUpon>RetailerList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

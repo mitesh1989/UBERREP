@@ -13,12 +13,12 @@ namespace UBERREP {
     public partial class Sales {
         
         /// <summary>
-        /// UsersList1 control.
+        /// SalesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::UBERREP.Controls.UsersList UsersList1;
+        protected global::UBERREP.Controls.SalesList SalesList;
     }
 }

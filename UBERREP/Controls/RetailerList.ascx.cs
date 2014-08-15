@@ -18,36 +18,19 @@ namespace UBERREP.Controls
     {
         private List<BusinessLayer.Users.User> userList;
         private BusinessLayer.Users.UserTypes userType;
-        public List<BusinessLayer.Users.User> UserList
-        {
-            get { return this.userList; }
-            set { this.userList = value; }
-        }
-        public BusinessLayer.Users.UserTypes UserType
-        {
-            get { return this.userType; }
-            set { this.userType = value; }
-        }
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) BindReapeater();
         }
 
-        public void BindData()
-        {
-            if (UserList != null && UserList.Count > 0)
-            {
-                UserListRPT.DataSource = UserList;
-                UserListRPT.DataBind();
-            }
-            else { UserListRPT.Visible = false; }
-        }
+       
         public void BindReapeater()
         {
            
             NameValueCollection spData = new NameValueCollection();
-            spData.Add("usertype", Convert.ToString(userType));
+            spData.Add("usertype", Convert.ToString((int)BusinessLayer.Users.UserTypes.Retailer));
             UserListRPT.DataSource = BusinessLayer.Users.UserManager.GetUsers(spData);
             UserListRPT.DataBind();
             //this.BindData();
@@ -113,7 +96,7 @@ namespace UBERREP.Controls
                         BusinessLayer.Users.User obj = new BusinessLayer.Users.User();
                         obj.ID = Convert.ToInt16(e.CommandArgument);
                         BusinessLayer.Users.UserManager.Delete(obj);
-                        this.BindData();
+                        this.BindReapeater();
                         ShowMessage("Record Deleted Successfully");
                         break;
                     }
@@ -192,7 +175,7 @@ namespace UBERREP.Controls
                         retObj.Points = Convert.ToDecimal(((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Points"))).Text);
 
                         BusinessLayer.Users.UserManager.Create(retObj);
-                        this.BindData();
+                        this.BindReapeater();
                         ShowMessage("Record Inserted Successfully");
                         break;
                     }

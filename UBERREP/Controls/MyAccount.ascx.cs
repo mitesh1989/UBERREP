@@ -24,7 +24,7 @@ namespace UBERREP.Controls
             obj.Username = TXTUsername.Text;
             obj.Password = TXTPassword.Text;
             obj.Remarks = TXTRemarks.Text;
-
+            obj.ID=BusinessLayer.Common.CurrentContext.CurrentUser!= null ? BusinessLayer.Common.CurrentContext.CurrentUser.ID : -9999;
             obj.Name = TXTName.Text;
 
 
@@ -59,7 +59,7 @@ namespace UBERREP.Controls
             obj.PaymentInfo.EmailMonthly = CHKAutoPay.Checked;
 
             BusinessLayer.Payment.PaymentInfo.ManagePayment(obj, BusinessLayer.DbOperationMode.Update);
-
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Profile Updated Successfully')", true);
         }
         private void DisplayData()
         {
@@ -71,14 +71,15 @@ namespace UBERREP.Controls
             {
                 TXTAddress.Text = obj.ContactData.Address.LineOne;
                 TXTCity.Text = obj.ContactData.Address.City != null ? obj.ContactData.Address.City.Name : string.Empty;
-                TXTEmail.Text = obj.ContactData.Email;
+                TXTEmail.Text = obj.Email;
                 TXTPhone.Text = obj.ContactData.ClientPhone;
             }
 
             TXTConfirmPassword.Text = TXTPassword.Text = obj.Password;
 
             TXTName.Text = obj.Name;
-
+            TXTPassword.Text = obj.Password;
+            TXTConfirmPassword.Text = obj.Password;
             TXTUsername.Text = obj.Username;
             TXTRemarks.Text = obj.Remarks;
 

@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterPages/Dashboard.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="UBERREP.Dashboard" %>
 
-<%@ Register Src="~/Controls/UsersList.ascx" TagPrefix="uc1" TagName="UsersList" %>
+
 <%@ Register Src="~/Controls/MyAccount.ascx" TagPrefix="uc1" TagName="MyAccount" %>
+<%@ Register Src="~/Controls/SalesList.ascx" TagPrefix="uc1" TagName="SalesList" %>
+<%@ Register Src="~/Controls/RetailerList.ascx" TagPrefix="uc1" TagName="RetailerList" %>
+
+
 
 
 
@@ -111,7 +115,7 @@
 
                         <div class="portlet-body">
 
-                            <uc1:UsersList runat="server" ID="UsersListSales" />
+                            <uc1:SalesList runat="server" id="SalesList" />
                         </div>
 
                         <!-- END EXAMPLE TABLE PORTLET-->
@@ -126,8 +130,8 @@
                                 </div>
                             </div>
                             <div class="portlet-body">
-
-                                <uc1:UsersList runat="server" ID="UsersListRetailer" />
+                                <uc1:RetailerList runat="server" id="RetailerList" />
+                                
                             </div>
 
                         </div>

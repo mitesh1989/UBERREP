@@ -11,8 +11,7 @@ namespace UBERREP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UsersListRetailer.UserType = BusinessLayer.Users.UserTypes.Retailer;
-            UsersListSales.UserType = BusinessLayer.Users.UserTypes.Sales;
+           
         }
     }
 }

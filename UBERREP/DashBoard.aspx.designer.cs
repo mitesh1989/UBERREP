@@ -22,21 +22,21 @@ namespace UBERREP {
         protected global::UBERREP.Controls.MyAccount MyAccount;
         
         /// <summary>
-        /// UsersListSales control.
+        /// SalesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::UBERREP.Controls.UsersList UsersListSales;
+        protected global::UBERREP.Controls.SalesList SalesList;
         
         /// <summary>
-        /// UsersListRetailer control.
+        /// RetailerList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::UBERREP.Controls.UsersList UsersListRetailer;
+        protected global::UBERREP.Controls.UsersList RetailerList;
     }
 }

@@ -193,7 +193,7 @@ namespace UBERREP.BusinessLayer.Users
             string password = IsPasswordEncrypted && !string.IsNullOrEmpty(this.Password) ? UBERREP.CommonLayer.Functions.Encrypt(this.Password, CommonLayer.Functions.EncryptionDataType.PasswordDataKey) : this.Password;
 
             this.Properties.sParameters[0] = new System.Data.SqlClient.SqlParameter("@mode", this.Mode);
-            this.Properties.sParameters[1] = new System.Data.SqlClient.SqlParameter("@id", currentUserID);
+            this.Properties.sParameters[1] = new System.Data.SqlClient.SqlParameter("@id", this.ID);
             this.Properties.sParameters[2] = new System.Data.SqlClient.SqlParameter("@name", this.Name);
             this.Properties.sParameters[3] = new System.Data.SqlClient.SqlParameter("@username", this.Username);
             this.Properties.sParameters[4] = new System.Data.SqlClient.SqlParameter("@password", password);
