@@ -37,7 +37,7 @@ namespace BusinessLayer.Common
                     case Status.Active:
                         {
                             CurrentContext.CurrentUser = loggedInUser;
-                            loggedInUser = UBERREP.BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(loggedInUser);
+                         //   loggedInUser = UBERREP.BusinessLayer.Users.UserManager.GetUserAllowedGroupSections(loggedInUser);
                             result = "Success";
                             break;
                         }

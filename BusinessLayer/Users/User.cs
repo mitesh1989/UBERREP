@@ -188,7 +188,7 @@ namespace UBERREP.BusinessLayer.Users
         internal override void Execute()
         {
             int currentUserID = UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser != null ? UBERREP.BusinessLayer.Common.CurrentContext.CurrentUser.ID : BusinessLayer.Users.User.DefaultSystemUserID;
-            this.Properties.sParameters = new System.Data.SqlClient.SqlParameter[13];
+            this.Properties.sParameters = new System.Data.SqlClient.SqlParameter[14];
 
             string password = IsPasswordEncrypted && !string.IsNullOrEmpty(this.Password) ? UBERREP.CommonLayer.Functions.Encrypt(this.Password, CommonLayer.Functions.EncryptionDataType.PasswordDataKey) : this.Password;
 
@@ -213,6 +213,10 @@ namespace UBERREP.BusinessLayer.Users
             this.Properties.sParameters[11] = new System.Data.SqlClient.SqlParameter("@gender", this.Gender);
 
             this.Properties.sParameters[12] = new System.Data.SqlClient.SqlParameter("@points", this.Points);
+            if(BusinessLayer.Common.CurrentContext.CurrentUser!= null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients!= null )
+                this.Properties.sParameters[13] = new System.Data.SqlClient.SqlParameter("@clientid", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID);
+            else
+                this.Properties.sParameters[13] = new System.Data.SqlClient.SqlParameter("@clientid", 0);
 
             if (this.Mode != BusinessLayer.DbOperationMode.Select)
             {
@@ -366,8 +370,8 @@ namespace UBERREP.BusinessLayer.Users
         public static BusinessLayer.Users.User Get(int UserID)
         {
             User retObj = null;
-            if (User.Users.ContainsKey(UserID)) return Users.User.Users[UserID];
-            else
+          //  if (User.Users.ContainsKey(UserID)) return Users.User.Users[UserID];
+           // else
             {
                 retObj = new User { ID = UserID };
                 retObj.Fetch();
@@ -392,7 +396,7 @@ namespace UBERREP.BusinessLayer.Users
                 if (spData["status"] != null) spParams.Add(new SqlParameter("@status", spData["status"]));
                 if (spData["email"] != null) spParams.Add(new SqlParameter("@email", spData["email"]));
                 if (spData["type"] != null) spParams.Add(new SqlParameter("@type", spData["type"]));
-                if (BusinessLayer.Common.CurrentContext.CurrentUser != null && BusinessLayer.Common.CurrentContext.CurrentUser.Type == UserTypes.Retailer && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0)
+                if (BusinessLayer.Common.CurrentContext.CurrentUser != null  && BusinessLayer.Common.CurrentContext.CurrentUser.Clients != null && BusinessLayer.Common.CurrentContext.CurrentUser.Clients.Count > 0)
                 {
                     spParams.Add(new SqlParameter("@ClientID", BusinessLayer.Common.CurrentContext.CurrentUser.Clients.FirstOrDefault().ID.ToString()));
                 }
