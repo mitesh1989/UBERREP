@@ -30,7 +30,7 @@ namespace UBERREP.Controls
         {
            
             NameValueCollection spData = new NameValueCollection();
-            spData.Add("usertype", Convert.ToString((int)BusinessLayer.Users.UserTypes.Retailer));
+            spData.Add("type", Convert.ToString((int)BusinessLayer.Users.UserTypes.Retailer));
             UserListRPT.DataSource = BusinessLayer.Users.UserManager.GetUsers(spData);
             UserListRPT.DataBind();
             //this.BindData();
@@ -116,8 +116,8 @@ namespace UBERREP.Controls
                         e.Item.FindControl("lnk_delete").Visible = false;
                         e.Item.FindControl("lnk_Cancel").Visible = true;
                         e.Item.FindControl("lnk_Edit").Visible = false;
-                        e.Item.FindControl("Lit_usename").Visible = false;
-                        e.Item.FindControl("TXT_username").Visible = true;
+                      //  e.Item.FindControl("Lit_usename").Visible = false;
+                      //  e.Item.FindControl("TXT_username").Visible = true;
                         e.Item.FindControl("lit_Point").Visible = false;
                         e.Item.FindControl("txt_Point").Visible = true;
                         e.Item.FindControl("lit_Notes").Visible = false;
@@ -132,8 +132,8 @@ namespace UBERREP.Controls
                         e.Item.FindControl("lnk_delete").Visible = true;
                         e.Item.FindControl("lnk_Cancel").Visible = false;
                         e.Item.FindControl("lnk_Edit").Visible = true;
-                        e.Item.FindControl("Lit_usename").Visible = true;
-                        e.Item.FindControl("TXT_username").Visible = false;
+                   //     e.Item.FindControl("Lit_usename").Visible = true;
+                    //    e.Item.FindControl("TXT_username").Visible = false;
                         e.Item.FindControl("lit_Point").Visible = true;
                         e.Item.FindControl("txt_Point").Visible = false;
                         e.Item.FindControl("lit_Notes").Visible = true;
@@ -146,14 +146,14 @@ namespace UBERREP.Controls
                     {
                         BusinessLayer.Users.User obj = new BusinessLayer.Users.User();//((List<BusinessLayer.Users.User>)((Repeater)source).DataSource)[e.Item.ItemIndex];
                         obj.ID = Convert.ToInt16(e.CommandArgument);
-                        obj.Type = userType;
+                        obj.Type = BusinessLayer.Users.UserTypes.Retailer;
                         obj.Password = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_pass"))).Text;
                         obj.Email = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text == string.Empty ? "NAN" : ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text;
-                        obj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
+                 //       obj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
                         obj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_FullName"))).Text;
                         //obj.RecordNumber = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Point"))).Text;
                         //obj.Type = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Notes"))).Text;
-
+                        
                         obj.Remarks = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Notes"))).Text;
                         obj.Points = Convert.ToDecimal(((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Point"))).Text);
 
@@ -166,14 +166,14 @@ namespace UBERREP.Controls
                     {
                         BusinessLayer.Users.User retObj = new BusinessLayer.Users.User();
                         //  retObj.Email = retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
-                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text;
+                        retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text;
                         retObj.Password = "123456";
-                        retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
-                        retObj.Type = userType;
+                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
+                        retObj.Type = BusinessLayer.Users.UserTypes.Retailer;
                         retObj.Status = Status.Active;
                         retObj.Remarks = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Notes"))).Text;
                         retObj.Points = Convert.ToDecimal(((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Points"))).Text);
-
+                        retObj.Email = "NAN";
                         BusinessLayer.Users.UserManager.Create(retObj);
                         this.BindReapeater();
                         ShowMessage("Record Inserted Successfully");

@@ -75,7 +75,7 @@
                       
                     <asp:Label ID="lbl_Email" Visible="false" runat="server" Text="<%#(((UBERREP.BusinessLayer.Users.User)Container.DataItem).Email).ToString() %>"></asp:Label>
                     <asp:Literal ID="Lit_usename" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' />
-                    <asp:TextBox ID="TXT_username" class="m-wrap small fixBig" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />
+                  <%--  <asp:TextBox ID="TXT_username" class="m-wrap small fixBig" runat="server" Text='<%#((UBERREP.BusinessLayer.Users.User)Container.DataItem).Username%>' Visible="false" />--%>
 
                 </td>
                 <td>

@@ -24,7 +24,7 @@ namespace UBERREP.Controls
                 retObj.Email = retObj.Username = this.TXTEmail.Text.Trim();
 
 
-                retObj.Type = (BusinessLayer.Users.UserTypes) Convert.ToInt16(drpRoles.SelectedValue);
+                retObj.Type = BusinessLayer.Users.UserTypes.WholeSale_Admin;
             
             
             {

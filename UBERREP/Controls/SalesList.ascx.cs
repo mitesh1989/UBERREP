@@ -113,8 +113,8 @@ namespace UBERREP.Controls
                         e.Item.FindControl("lnk_delete").Visible = false;
                         e.Item.FindControl("lnk_Cancel").Visible = true;
                         e.Item.FindControl("lnk_Edit").Visible = false;
-                        e.Item.FindControl("Lit_usename").Visible = false;
-                        e.Item.FindControl("TXT_username").Visible = true;
+                        //e.Item.FindControl("Lit_usename").Visible = false;
+                        //e.Item.FindControl("TXT_username").Visible = true;
                         e.Item.FindControl("lit_Point").Visible = false;
                         e.Item.FindControl("txt_Point").Visible = true;
                         e.Item.FindControl("lit_Notes").Visible = false;
@@ -129,8 +129,8 @@ namespace UBERREP.Controls
                         e.Item.FindControl("lnk_delete").Visible = true;
                         e.Item.FindControl("lnk_Cancel").Visible = false;
                         e.Item.FindControl("lnk_Edit").Visible = true;
-                        e.Item.FindControl("Lit_usename").Visible = true;
-                        e.Item.FindControl("TXT_username").Visible = false;
+                       // e.Item.FindControl("Lit_usename").Visible = true;
+                      //  e.Item.FindControl("TXT_username").Visible = false;
                         e.Item.FindControl("lit_Point").Visible = true;
                         e.Item.FindControl("txt_Point").Visible = false;
                         e.Item.FindControl("lit_Notes").Visible = true;
@@ -146,7 +146,7 @@ namespace UBERREP.Controls
                         obj.Type = BusinessLayer.Users.UserTypes.Sales;
                         obj.Password = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_pass"))).Text;
                         obj.Email = ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text == string.Empty ? "NAN" : ((System.Web.UI.WebControls.Label)(e.Item.FindControl("lbl_Email"))).Text;
-                        obj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
+                    //    obj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
                         obj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_FullName"))).Text;
                         //obj.RecordNumber = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Point"))).Text;
                         //obj.Type = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_Notes"))).Text;
@@ -164,9 +164,9 @@ namespace UBERREP.Controls
                     {
                         BusinessLayer.Users.User retObj = new BusinessLayer.Users.User();
                         //  retObj.Email = retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("TXT_username"))).Text;
-                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text;
+                        retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Username"))).Text;
                         retObj.Password = "123456";
-                        retObj.Username = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
+                        retObj.Name = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Fullname"))).Text;
                         retObj.Type = BusinessLayer.Users.UserTypes.Sales;
                         retObj.Status = Status.Active;
                         retObj.Remarks = ((System.Web.UI.WebControls.TextBox)(e.Item.FindControl("txt_ins_Notes"))).Text;

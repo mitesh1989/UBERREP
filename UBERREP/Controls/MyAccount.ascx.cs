@@ -71,10 +71,10 @@ namespace UBERREP.Controls
             {
                 TXTAddress.Text = obj.ContactData.Address.LineOne;
                 TXTCity.Text = obj.ContactData.Address.City != null ? obj.ContactData.Address.City.Name : string.Empty;
-                TXTEmail.Text = obj.Email;
+                TXTEmail.Text = obj.ContactData.Email;      
                 TXTPhone.Text = obj.ContactData.ClientPhone;
             }
-
+          
             TXTConfirmPassword.Text = TXTPassword.Text = obj.Password;
 
             TXTName.Text = obj.Name;
@@ -92,9 +92,13 @@ namespace UBERREP.Controls
                     TXTCVC.Text = obj.PaymentInfo.CreditCard.CVV;
                     TXTHolderName.Text = obj.PaymentInfo.CreditCard.HolderName;
 
-                    
-                    TXTMonth.Text = !string.IsNullOrEmpty(obj.PaymentInfo.CreditCard.ExpiryDate) ? obj.PaymentInfo.CreditCard.ExpiryDate.Substring(0, 2) : string.Empty;
-                    TXTYear.Text = !string.IsNullOrEmpty(obj.PaymentInfo.CreditCard.ExpiryDate) ? obj.PaymentInfo.CreditCard.ExpiryDate.Substring(2, 4) : string.Empty;
+                    string expirationdate = obj.PaymentInfo.CreditCard.ExpiryDate;
+                    if(!string.IsNullOrEmpty(expirationdate) && expirationdate.Length > 2)
+                    {
+
+                        TXTMonth.Text = expirationdate.Substring(0, 2);
+                        TXTYear.Text = expirationdate.Substring(2, expirationdate.Length-2);
+                    }
                 }
 
             }
